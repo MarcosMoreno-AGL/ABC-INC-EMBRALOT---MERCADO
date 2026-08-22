@@ -301,7 +301,8 @@
   /* ============ PORTFOLIO ============ */
   .port-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:20px;}
   @media (max-width:1100px){ .port-grid{grid-template-columns:repeat(2,1fr);} }
-  .proj{background:var(--white); display:flex; flex-direction:column; min-width:0; overflow:hidden;}
+  .proj{background:var(--white); display:flex; flex-direction:column; min-width:0; overflow:hidden; text-decoration:none; cursor:pointer; transition:transform .15s, box-shadow .15s;}
+  a.proj:hover{transform:translateY(-3px); box-shadow:var(--shadow); position:relative; z-index:1;}
   .proj-photo{width:100%; height:130px; object-fit:cover; display:block; background:var(--beige);}
   .proj-body{padding:14px 18px 18px; display:flex; flex-direction:column; flex:1;}
   .proj-status{font-family:"IBM Plex Mono",monospace; font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); background:var(--beige); padding:3px 8px; border-radius:3px; align-self:flex-start;}
@@ -759,14 +760,14 @@
         <h2>ABC Empreendimentos</h2>
         <p class="lede" data-i18n="pa.lede">Edificações verticais de alto padrão — do lançamento à entrega.</p>
         <div class="port-grid">
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/its-all-right.jpg" alt="It's All Right"><div class="proj-body"><span class="proj-status" data-i18n="st.launch">Lançamento</span><h4>It's All Right</h4><div class="loc">Itapema</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/ena-deck-frontal.jpg" alt="Ená"><div class="proj-body"><span class="proj-status" data-i18n="st.build">Em obras</span><h4>Ená</h4><div class="loc">Praia do Estaleiro, BC</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/vitreo-271.jpg" alt="Vitreo 271"><div class="proj-body"><span class="proj-status" data-i18n="st.build">Em obras</span><h4>Vitreo 271</h4><div class="loc">Itapema</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/bravo-residences.jpg" alt="Bravo Residences"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered25">Entregue · jul/25</span><h4>Bravo Residences</h4><div class="loc">Praia Brava, Itajaí</div><div class="price" data-i18n="pa.price">R$ 28 mi / 330m² · restam 2 un.</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/mayfair-143.jpg" alt="143 Mayfair"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>143 Mayfair</h4><div class="loc">Itapema</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/marina-view.jpg" alt="Marina View"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>Marina View</h4><div class="loc">Itapema</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/torres-caribe.webp" alt="Torres do Caribe"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>Torres do Caribe</h4><div class="loc">Itapema</div></div></div>
-          <div class="proj"><img class="proj-photo" src="assets/img/portfolio/lagom-pereque.jpg" alt="Lagom Perequê"><div class="proj-body"><span class="proj-status" data-i18n="pa.gthome">Parceria GT.Home</span><h4>Lagom Perequê</h4><div class="loc">Porto Belo</div></div></div>
+          <a class="proj" href="https://abcincembralot.com.br/its-all-right-residencias-inteligentes/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/its-all-right.jpg" alt="It's All Right"><div class="proj-body"><span class="proj-status" data-i18n="st.launch">Lançamento</span><h4>It's All Right</h4><div class="loc">Itapema</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/ena/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/ena-deck-frontal.jpg" alt="Ená"><div class="proj-body"><span class="proj-status" data-i18n="st.build">Em obras</span><h4>Ená</h4><div class="loc">Praia do Estaleiro, BC</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/vitreo-271/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/vitreo-271.jpg" alt="Vitreo 271"><div class="proj-body"><span class="proj-status" data-i18n="st.build">Em obras</span><h4>Vitreo 271</h4><div class="loc">Itapema</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/bravo-residences/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/bravo-residences.jpg" alt="Bravo Residences"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered25">Entregue · jul/25</span><h4>Bravo Residences</h4><div class="loc">Praia Brava, Itajaí</div><div class="price" data-i18n="pa.price">R$ 28 mi / 330m² · restam 2 un.</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/143-mayfair/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/mayfair-143.jpg" alt="143 Mayfair"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>143 Mayfair</h4><div class="loc">Itapema</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/marina-view-residence/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/marina-view.jpg" alt="Marina View"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>Marina View</h4><div class="loc">Itapema</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/torres-do-caribe" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/torres-caribe.webp" alt="Torres do Caribe"><div class="proj-body"><span class="proj-status" data-i18n="st.delivered">Entregue</span><h4>Torres do Caribe</h4><div class="loc">Itapema</div></div></a>
+          <a class="proj" href="https://abcincembralot.com.br/lagom-pereque/" target="_blank" rel="noopener"><img class="proj-photo" src="assets/img/portfolio/lagom-pereque.jpg" alt="Lagom Perequê"><div class="proj-body"><span class="proj-status" data-i18n="pa.gthome">Parceria GT.Home</span><h4>Lagom Perequê</h4><div class="loc">Porto Belo</div></div></a>
         </div>
         <p class="foot-note" data-i18n="pa.foot">Bravo Residences: assinado por Studio Arthur Casas, 6 unidades exclusivas (1 por andar) — ≈R$84,8 mil/m². Demais unidades sob consulta comercial.</p>
       </div>
@@ -781,11 +782,11 @@
         <h2>Embralot</h2>
         <p class="lede" data-i18n="pe.lede">Loteamentos, bairros planejados e complexos multissetoriais.</p>
         <div class="port-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="proj"><span class="proj-status" data-i18n="pe.st1">Bairro planejado</span><h4>Colinas de Camboriú</h4><div class="loc">Camboriú</div></div>
-          <div class="proj"><span class="proj-status" data-i18n="pe.st2">Logístico</span><h4>Navepark</h4><div class="loc">Navegantes</div></div>
-          <div class="proj"><span class="proj-status" data-i18n="pe.st3">Loteamento</span><h4>Gralha Azul</h4><div class="loc">Camboriú</div></div>
-          <div class="proj"><span class="proj-status" data-i18n="pe.st4">Negócios</span><h4>ABC Business Park</h4><div class="loc">Porto Belo</div></div>
-          <div class="proj"><span class="proj-status" data-i18n="pe.st3">Loteamento</span><h4>Ecoville</h4><div class="loc">Porto Belo</div></div>
+          <a class="proj" href="https://abcincembralot.com.br/colinas-de-camboriu-village/" target="_blank" rel="noopener"><span class="proj-status" data-i18n="pe.st1">Bairro planejado</span><h4>Colinas de Camboriú</h4><div class="loc">Camboriú</div></a>
+          <a class="proj" href="https://abcincembralot.com.br/navepark/" target="_blank" rel="noopener"><span class="proj-status" data-i18n="pe.st2">Logístico</span><h4>Navepark</h4><div class="loc">Navegantes</div></a>
+          <a class="proj" href="https://abcincembralot.com.br/gralha-azul/" target="_blank" rel="noopener"><span class="proj-status" data-i18n="pe.st3">Loteamento</span><h4>Gralha Azul</h4><div class="loc">Camboriú</div></a>
+          <a class="proj" href="https://abcincembralot.com.br/abc-business-park/" target="_blank" rel="noopener"><span class="proj-status" data-i18n="pe.st4">Negócios</span><h4>ABC Business Park</h4><div class="loc">Porto Belo</div></a>
+          <a class="proj" href="https://abcincembralot.com.br/loteamento-ecoville/" target="_blank" rel="noopener"><span class="proj-status" data-i18n="pe.st3">Loteamento</span><h4>Ecoville</h4><div class="loc">Porto Belo</div></a>
         </div>
       </div>
     </section>
@@ -1044,7 +1045,7 @@
       <span class="photo-credit" data-i18n="cta.credit">Terraço gourmet com vista mar · empreendimento ABC.inc</span>
       <div class="slide-inner">
         <span class="eyebrow" data-i18n="cta.eyebrow">20 · Ação Comercial</span>
-        <h2 data-i18n="cta.h2">ABC.inc — onde sua experiência começa</h2>
+        <h2 data-i18n="cta.h2">ABC.inc — Onde sua Experiência Começa</h2>
         <div class="cta-grid">
           <ol class="argu">
             <li><span class="n">01</span><div><strong data-i18n="cta.a1s">Exclusividade comprovada por dado.</strong><span data-i18n="cta.a1p">Itapema é hoje o m² mais caro do Brasil.</span></div></li>
@@ -1217,7 +1218,7 @@
       'pop.charth3':'Hotel occupancy · BC · February', 'pop.foot':'5-year record in Feb/2025 (89.61%). Source: PANROTAS.',
       'vi.eyebrow':'09 · Institutional Presentation', 'vi.cap':'The Group’s institutional video, narrated in English.',
       'ct.eyebrow':'19 · Content &amp; Social Media', 'ct.h2':'Discover our Developments', 'ct.cap1':'Content 01', 'ct.cap2':'Content 02',
-      'cta.eyebrow':'20 · Sales Action', 'cta.h2':'ABC.inc — where your experience begins', 'cta.credit':'Gourmet terrace with ocean view · ABC.inc development',
+      'cta.eyebrow':'20 · Sales Action', 'cta.h2':'ABC.inc — Where Your Experience Begins', 'cta.credit':'Gourmet terrace with ocean view · ABC.inc development',
       'cta.a1s':'Exclusivity proven by data.', 'cta.a1p':'Itapema now has the most expensive sqm in Brazil.',
       'cta.a2s':'Guaranteed pipeline.', 'cta.a2p':'12.4 million sqm in land bank, 2,200 units already delivered.',
       'cta.a3s':'Porto Belo as the entry point.', 'cta.a3p':'Projected appreciation of up to 64% by 2030.',
@@ -1339,7 +1340,7 @@
       'pop.charth3':'Ocupación hotelera · BC · febrero', 'pop.foot':'Récord de 5 años en feb/2025 (89,61%). Fuente: PANROTAS.',
       'vi.eyebrow':'09 · Presentación Institucional', 'vi.cap':'Video institucional del grupo, narrado en español.',
       'ct.eyebrow':'19 · Contenido y Redes', 'ct.h2':'Conoce nuestros Emprendimientos', 'ct.cap1':'Contenido 01', 'ct.cap2':'Contenido 02',
-      'cta.eyebrow':'20 · Acción Comercial', 'cta.h2':'ABC.inc — donde comienza tu experiencia', 'cta.credit':'Terraza gourmet con vista al mar · emprendimiento ABC.inc',
+      'cta.eyebrow':'20 · Acción Comercial', 'cta.h2':'ABC.inc — Donde Comienza tu Experiencia', 'cta.credit':'Terraza gourmet con vista al mar · emprendimiento ABC.inc',
       'cta.a1s':'Exclusividad comprobada por datos.', 'cta.a1p':'Itapema es hoy el m² más caro de Brasil.',
       'cta.a2s':'Pipeline garantizado.', 'cta.a2p':'12,4 millones de m² en banco de tierras, 2.200 unidades ya entregadas.',
       'cta.a3s':'Porto Belo como entrada.', 'cta.a3p':'Proyección de valorización de hasta 64% para 2030.',
