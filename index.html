@@ -419,13 +419,13 @@
 <div class="market-ticker" id="marketTicker" role="marquee" aria-label="Indicadores de mercado">
   <div class="ticker-track" id="tickerTrack">
     <div class="ticker-set">
-      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val">R$ 5,16</span><span class="tk-dt">01/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val">179.722 pts</span><span class="tk-dt">01/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val">4,44%</span><span class="tk-dt">jul/26</span></span>
-      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val">6,56%</span><span class="tk-dt">ago/26</span></span>
+      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,16</span><span class="tk-dt" data-metric="usdbrl" data-field="dt">01/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">179.722 pts</span><span class="tk-dt" data-metric="ibovespa" data-field="dt">01/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,44%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">jul/26</span></span>
+      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,56%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">ago/26</span></span>
       <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.151,24</span><span class="tk-dt">ago/26</span></span>
-      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val">13,90%</span><span class="tk-dt">set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val">2,16%</span><span class="tk-dt">ago/26</span></span>
+      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val" data-metric="cdi" data-field="val">13,90%</span><span class="tk-dt" data-metric="cdi" data-field="dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val" data-metric="igpm12m" data-field="val">2,16%</span><span class="tk-dt" data-metric="igpm12m" data-field="dt">ago/26</span></span>
       <span class="tk-item"><span class="tk-lab">Fontes</span><span class="tk-dt" style="opacity:.9;">BCB · B3 · IBGE · FGV · Sinduscon-SC</span></span>
     </div>
     <div class="ticker-set" aria-hidden="true">
@@ -676,8 +676,8 @@
         <h2 data-i18n="rk.h2">Itapema segue à frente de Balneário Camboriú — Vitória assume o topo nacional</h2>
         <p class="lede" data-i18n="rk.lede">O FipeZap de agosto/2026 (divulgado em set/2026) mostra Vitória (ES) na liderança nacional; Itapema mantém a 2ª posição, à frente de Balneário Camboriú desde jun/2026 — as três formam um grupo isolado acima de R$15 mil/m².</p>
         <div class="badge-row">
-          <div class="badge"><div class="v num">+28%</div><div class="l" data-i18n="rk.b1">Acima de São Paulo</div></div>
-          <div class="badge"><div class="v num">+39%</div><div class="l" data-i18n="rk.b2">Acima do Rio de Janeiro</div></div>
+          <div class="badge"><div class="v num">+27%</div><div class="l" data-i18n="rk.b1">Acima de São Paulo</div></div>
+          <div class="badge"><div class="v num">+37%</div><div class="l" data-i18n="rk.b2">Acima do Rio de Janeiro</div></div>
           <div class="badge"><div class="v num">+105%</div><div class="l" data-i18n="rk.b3">Acima de Porto Alegre</div></div>
         </div>
         <div class="rank-list">
@@ -686,11 +686,26 @@
           <div class="rank-row"><span class="rank-pos">03</span><span class="rank-city">Bal. Camboriú <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:98.0%; background:#B8860B;"></div></div><span class="rank-val num">R$ 15.343</span></div>
           <div class="rank-row"><span class="rank-pos">04</span><span class="rank-city">Porto Belo <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:94.0%; background:#2563AC;"></div></div><span class="rank-val num">R$ 14.712</span></div>
           <div class="rank-row"><span class="rank-pos">05</span><span class="rank-city">Florianópolis <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:86.5%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 13.531</span></div>
-          <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">São Paulo <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:77.0%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 12.055</span></div>
-          <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:70.6%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 11.049</span></div>
-          <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Porto Alegre <span class="uf">RS</span></span><div class="rank-track"><div class="rank-fill" style="width:47.9%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 7.500</span></div>
+          <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">São Paulo <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:77.6%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 12.143</span></div>
+          <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:71.7%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 11.216</span></div>
+          <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Porto Alegre <span class="uf">RS</span></span><div class="rank-track"><div class="rank-fill" style="width:48.0%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 7.510</span></div>
         </div>
-        <p class="foot-note" data-i18n="rk.foot">Fonte: FIPE — Índice FipeZap, ago/2026 (divulgado set/2026). Porto Belo: R$14.712/m² — preço médio das unidades vendidas no 1º semestre de 2026, DWV Inteligência de Mercado (dado interno, não reverificado nesta rodada); metodologia distinta do FipeZap (transações, não anúncios). São Paulo, Rio de Janeiro e Porto Alegre: valores da rodada anterior, não reverificados nesta atualização.</p>
+        <p class="foot-note" data-i18n="rk.foot">Fonte: FIPE — Índice FipeZap, Informe de Agosto/2026 (divulgado set/2026). Porto Belo: R$14.712/m² — preço médio das unidades vendidas no 1º semestre de 2026, DWV Inteligência de Mercado (dado interno, metodologia distinta do FipeZap: transações, não anúncios).</p>
+
+        <p class="foot-note" style="margin-top:28px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--ink);" data-i18n="rk.t2">Radar mensal · valorização das cidades catarinenses monitoradas pelo FipeZap</p>
+        <table>
+          <thead><tr><th data-i18n="rk.th1">Cidade</th><th data-i18n="rk.th2">R$/m²</th><th data-i18n="rk.th3">Var. mês (ago/26)</th><th data-i18n="rk.th4">Var. mês (jul/26)</th><th data-i18n="rk.th5">Var. 12 meses</th></tr></thead>
+          <tbody>
+            <tr><td><strong data-i18n="rk.c.flo">Florianópolis</strong> <span class="uf">SC</span></td><td class="num">R$ 13.531</td><td class="num" style="color:#1E8F5E;">+0,52%</td><td class="num">+0,71%</td><td class="num">+8,20%</td></tr>
+            <tr><td><strong data-i18n="rk.c.ita">Itajaí</strong> <span class="uf">SC</span></td><td class="num">R$ 13.354</td><td class="num" style="color:#1E8F5E;">+0,40%</td><td class="num">+0,29%</td><td class="num">+4,92%</td></tr>
+            <tr><td><strong data-i18n="rk.c.blu">Blumenau</strong> <span class="uf">SC</span></td><td class="num">R$ 8.177</td><td class="num" style="color:#1E8F5E;">+0,40%</td><td class="num">+0,89%</td><td class="num">+9,60%</td></tr>
+            <tr><td><strong data-i18n="rk.c.bc">Balneário Camboriú</strong> <span class="uf">SC</span></td><td class="num">R$ 15.343</td><td class="num">+0,31%</td><td class="num">+0,44%</td><td class="num">+2,82%</td></tr>
+            <tr><td><strong data-i18n="rk.c.itp">Itapema</strong> <span class="uf">SC</span></td><td class="num">R$ 15.403</td><td class="num" style="color:#B8860B;">−0,00%</td><td class="num">+0,50%</td><td class="num">+4,85%</td></tr>
+            <tr><td><strong data-i18n="rk.c.sj">São José</strong> <span class="uf">SC</span></td><td class="num">R$ 9.093</td><td class="num" style="color:#B8860B;">−0,01%</td><td class="num">+0,19%</td><td class="num">+6,14%</td></tr>
+            <tr><td><strong data-i18n="rk.c.pb">Porto Belo</strong> <span class="uf">SC</span></td><td class="num">R$ 14.712</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+        <p class="foot-note" data-i18n="rk.t2foot">Fonte: FIPE — Índice FipeZap, Informe de Agosto/2026 (PDF oficial, fipe.org.br), variação mensal ago/26 vs. jul/26 e acumulado 12 meses. Ordenado pela maior valorização no mês. <strong>Destaque: Itapema teve o pior desempenho mensal do grupo em ago/26 (variação ~0%), enquanto Florianópolis, Itajaí e Blumenau aceleraram</strong> — é esse movimento que tirou Itapema do 1º lugar nacional (ver ranking acima). Porto Belo não integra a amostra do FipeZap; valor de referência é da DWV Inteligência de Mercado (1º sem. 2026), não comparável mês a mês. Atualizado mensalmente mediante revisão — ver data no rodapé da capa.</p>
       </div>
     </section>
 
@@ -1089,6 +1104,26 @@
 
 <script>
 (function(){
+  // Live market ticker — pulls official data (BCB SGS + B3/Ibovespa) via /api/indicadores.
+  // On any failure (offline dev preview, endpoint down, etc.) the static fallback values
+  // baked into the HTML stay exactly as they are — the ticker never goes blank or shows "undefined".
+  fetch('/api/indicadores').then(function(r){
+    if (!r.ok) throw new Error('bad status ' + r.status);
+    return r.json();
+  }).then(function(data){
+    Object.keys(data).forEach(function(metric){
+      var entry = data[metric];
+      if (!entry || !entry.label) return;
+      document.querySelectorAll('[data-metric="' + metric + '"][data-field="val"]').forEach(function(el){ el.textContent = entry.label; });
+      document.querySelectorAll('[data-metric="' + metric + '"][data-field="dt"]').forEach(function(el){ el.textContent = entry.date; });
+    });
+  }).catch(function(err){
+    console.warn('[ticker] live data unavailable, showing last known static values:', err.message);
+  });
+})();
+</script>
+<script>
+(function(){
   var LABELS = {
     pt: ['Capa','Território','Panorama Nacional','Canteiros de Obras','Cidades com Potencial','Conectividade','Preço & Ranking','Vetores','O Grupo','Vídeo Institucional','Diretoria','Portfólio ABC','Portfólio Embralot','Concorrência','Benchmark de Construtoras','Indicadores','Curva de Valorização','Projeção','População & Turismo','Conteúdo & Redes','Ação Comercial'],
     en: ['Cover','Territory','National Overview','Construction Activity','Cities with Potential','Connectivity','Price & Ranking','Drivers','The Group','Institutional Video','Board','ABC Portfolio','Embralot Portfolio','Competition','Builder Benchmark','Indicators','Appreciation Curve','Outlook','Population & Tourism','Content & Social','Sales Action'],
@@ -1153,7 +1188,11 @@
       'rk.eyebrow':'06 · Price &amp; Appreciation', 'rk.h2':'Itapema stays ahead of Balneário Camboriú — Vitória takes the national lead',
       'rk.lede':'FipeZap\'s August/2026 index (released Sep/2026) shows Vitória (ES) in the national lead; Itapema holds 2nd place, ahead of Balneário Camboriú since Jun/2026 — the three form an isolated group above R$15,000/sqm.',
       'rk.b1':'Above São Paulo', 'rk.b2':'Above Rio de Janeiro', 'rk.b3':'Above Porto Alegre',
-      'rk.foot':'Source: FIPE — FipeZap Index, Aug/2026 (released Sep/2026). Porto Belo: R$14,712/sqm — average price of units sold in H1 2026, DWV Market Intelligence (internal figure, not re-verified this round); different methodology from FipeZap (transactions, not listings). São Paulo, Rio de Janeiro and Porto Alegre: prior-round values, not re-verified this update.',
+      'rk.foot':'Source: FIPE — FipeZap Index, August/2026 Report (released Sep/2026). Porto Belo: R$14,712/sqm — average price of units sold in H1 2026, DWV Market Intelligence (internal figure, different methodology from FipeZap: transactions, not listings).',
+      'rk.t2':'Monthly radar · appreciation across FipeZap-monitored Santa Catarina cities',
+      'rk.th1':'City', 'rk.th2':'R$/sqm', 'rk.th3':'Monthly var. (Aug/26)', 'rk.th4':'Monthly var. (Jul/26)', 'rk.th5':'12-month var.',
+      'rk.c.flo':'Florianópolis', 'rk.c.ita':'Itajaí', 'rk.c.blu':'Blumenau', 'rk.c.bc':'Balneário Camboriú', 'rk.c.itp':'Itapema', 'rk.c.sj':'São José', 'rk.c.pb':'Porto Belo',
+      'rk.t2foot':'Source: FIPE — FipeZap Index, August/2026 Report (official PDF, fipe.org.br), Aug/26 vs. Jul/26 monthly variation and 12-month accumulated. Sorted by highest monthly appreciation. <strong>Highlight: Itapema posted the group\'s weakest monthly performance in Aug/26 (~0% change), while Florianópolis, Itajaí and Blumenau accelerated</strong> — this is the shift that cost Itapema the national #1 spot (see ranking above). Porto Belo is not part of FipeZap\'s sample; its reference value comes from DWV Market Intelligence (H1 2026), not month-to-month comparable. Updated monthly under human review — see date in the cover footer.',
       'dv.eyebrow':'07 · Appreciation Drivers', 'dv.h2':'Infrastructure and demand sustaining the cycle',
       'dv.d1.tag':'85% complete', 'dv.d1.p':'73 km highway duplication linking the coast to western Santa Catarina — R$1.7B invested.',
       'dv.d2.tag':'R$9B in returns', 'dv.d2.p':'Bridges and frontage roads unlocking bottlenecks between BC, Itajaí and Navegantes.',
@@ -1275,7 +1314,11 @@
       'rk.eyebrow':'06 · Precio y Valorización', 'rk.h2':'Itapema se mantiene por delante de Balneário Camboriú — Vitória asume el liderazgo nacional',
       'rk.lede':'El índice FipeZap de agosto/2026 (publicado en set/2026) muestra a Vitória (ES) en el liderazgo nacional; Itapema mantiene el 2º lugar, por delante de Balneário Camboriú desde jun/2026 — las tres forman un grupo aislado por encima de R$15 mil/m².',
       'rk.b1':'Por encima de São Paulo', 'rk.b2':'Por encima de Río de Janeiro', 'rk.b3':'Por encima de Porto Alegre',
-      'rk.foot':'Fuente: FIPE — Índice FipeZap, ago/2026 (publicado en set/2026). Porto Belo: R$14.712/m² — precio medio de las unidades vendidas en el 1S 2026, DWV Inteligencia de Mercado (dato interno, no reverificado en esta ronda); metodología distinta de FipeZap (transacciones, no anuncios). São Paulo, Río de Janeiro y Porto Alegre: valores de la ronda anterior, no reverificados en esta actualización.',
+      'rk.foot':'Fuente: FIPE — Índice FipeZap, Informe de Agosto/2026 (publicado en set/2026). Porto Belo: R$14.712/m² — precio medio de las unidades vendidas en el 1S 2026, DWV Inteligencia de Mercado (dato interno, metodología distinta de FipeZap: transacciones, no anuncios).',
+      'rk.t2':'Radar mensual · valorización de las ciudades catarinenses monitoreadas por FipeZap',
+      'rk.th1':'Ciudad', 'rk.th2':'R$/m²', 'rk.th3':'Var. mensual (ago/26)', 'rk.th4':'Var. mensual (jul/26)', 'rk.th5':'Var. 12 meses',
+      'rk.c.flo':'Florianópolis', 'rk.c.ita':'Itajaí', 'rk.c.blu':'Blumenau', 'rk.c.bc':'Balneário Camboriú', 'rk.c.itp':'Itapema', 'rk.c.sj':'São José', 'rk.c.pb':'Porto Belo',
+      'rk.t2foot':'Fuente: FIPE — Índice FipeZap, Informe de Agosto/2026 (PDF oficial, fipe.org.br), variación mensual ago/26 vs. jul/26 y acumulado 12 meses. Ordenado por mayor valorización en el mes. <strong>Destacado: Itapema tuvo el peor desempeño mensual del grupo en ago/26 (variación ~0%), mientras Florianópolis, Itajaí y Blumenau aceleraron</strong> — ese movimiento es lo que le costó a Itapema el 1er lugar nacional (ver ranking arriba). Porto Belo no integra la muestra de FipeZap; su valor de referencia es de DWV Inteligencia de Mercado (1S 2026), no comparable mes a mes. Actualizado mensualmente con revisión humana — ver fecha en el pie de la portada.',
       'dv.eyebrow':'07 · Vectores de Valorización', 'dv.h2':'Infraestructura y demanda sostienen el ciclo',
       'dv.d1.tag':'85% ejecutada', 'dv.d1.p':'Duplicación de 73 km que conecta el litoral con el oeste de Santa Catarina — R$1.700 M invertidos.',
       'dv.d2.tag':'R$9 mil M de retorno', 'dv.d2.p':'Puentes y vías marginales que destraban los cuellos de botella entre BC, Itajaí y Navegantes.',
