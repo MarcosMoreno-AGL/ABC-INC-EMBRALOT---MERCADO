@@ -35,10 +35,24 @@ function brDateToDayLabel(brDate) {
   return `${dd}/${meses[parseInt(mm, 10) - 1]}/${yyyy.slice(2)}`;
 }
 
+// Day-over-day trend for a quote: direction drives the green/red highlight in the ticker.
+function trend(current, previous) {
+  if (!isFinite(current) || !isFinite(previous) || previous === 0) {
+    return { direction: 'flat', changePct: null, changeLabel: '' };
+  }
+  const pct = (current / previous - 1) * 100;
+  const direction = pct > 0.005 ? 'up' : pct < -0.005 ? 'down' : 'flat';
+  const arrow = direction === 'up' ? '▲' : direction === 'down' ? '▼' : '•';
+  const changeLabel = direction === 'flat'
+    ? '0,00%'
+    : `${arrow} ${pct > 0 ? '+' : '−'}${Math.abs(pct).toFixed(2).replace('.', ',')}%`;
+  return { direction, changePct: pct, changeLabel };
+}
+
 export default async function handler(req, res) {
   try {
     const [usd, ipca12, igpmHist, inccHist, cdi, ibovResp] = await Promise.all([
-      sgs(1, 1),       // USD/BRL PTAX venda (diário)
+      sgs(1, 5),       // USD/BRL PTAX venda (diário) — 5 p/ pegar o fechamento anterior mesmo após feriado
       sgs(13522, 1),   // IPCA acumulado 12 meses (IBGE, via BCB)
       sgs(189, 13),    // IGP-M variação mensal (FGV) — 13 meses p/ compor 12m com folga
       sgs(192, 13),    // INCC-M variação mensal (FGV)
@@ -50,16 +64,28 @@ export default async function handler(req, res) {
 
     const igpm12 = acc12(igpmHist);
     const incc12 = acc12(inccHist);
-    const ibovMeta = ibovResp?.chart?.result?.[0]?.meta;
+    const ibovResult = ibovResp?.chart?.result?.[0];
+    const ibovMeta = ibovResult?.meta;
     if (!ibovMeta?.regularMarketPrice) throw new Error('Ibovespa price missing');
 
     const ibovDate = new Date(ibovMeta.regularMarketTime * 1000);
     const ibovDateBR = `${String(ibovDate.getDate()).padStart(2,'0')}/${String(ibovDate.getMonth()+1).padStart(2,'0')}/${ibovDate.getFullYear()}`;
 
+    // USD day-over-day: last two available PTAX closes.
+    const usdNow = parseFloat(usd[usd.length - 1].valor);
+    const usdPrev = usd.length > 1 ? parseFloat(usd[usd.length - 2].valor) : NaN;
+    const usdTrend = trend(usdNow, usdPrev);
+
+    // Ibovespa day-over-day: last two distinct daily closes, falling back to Yahoo's chartPreviousClose.
+    const ibovCloses = (ibovResult?.indicators?.quote?.[0]?.close || []).filter(v => typeof v === 'number');
+    const ibovNow = ibovCloses.length ? ibovCloses[ibovCloses.length - 1] : ibovMeta.regularMarketPrice;
+    const ibovPrev = ibovCloses.length > 1 ? ibovCloses[ibovCloses.length - 2] : ibovMeta.chartPreviousClose;
+    const ibovTrend = trend(ibovNow, ibovPrev);
+
     const payload = {
       updatedAt: new Date().toISOString(),
-      usdbrl: { value: parseFloat(usd[0].valor), label: `R$ ${parseFloat(usd[0].valor).toFixed(2).replace('.', ',')}`, date: brDateToDayLabel(usd[0].data) },
-      ibovespa: { value: Math.round(ibovMeta.regularMarketPrice), label: `${Math.round(ibovMeta.regularMarketPrice).toLocaleString('pt-BR')} pts`, date: brDateToDayLabel(ibovDateBR) },
+      usdbrl: { value: usdNow, label: `R$ ${usdNow.toFixed(2).replace('.', ',')}`, date: brDateToDayLabel(usd[usd.length - 1].data), direction: usdTrend.direction, changePct: usdTrend.changePct, changeLabel: usdTrend.changeLabel },
+      ibovespa: { value: Math.round(ibovMeta.regularMarketPrice), label: `${Math.round(ibovMeta.regularMarketPrice).toLocaleString('pt-BR')} pts`, date: brDateToDayLabel(ibovDateBR), direction: ibovTrend.direction, changePct: ibovTrend.changePct, changeLabel: ibovTrend.changeLabel },
       ipca12m: { value: parseFloat(ipca12[0].valor), label: `${parseFloat(ipca12[0].valor).toFixed(2).replace('.', ',')}%`, date: brDateToLabel(ipca12[0].data) },
       inccm12m: { value: incc12, label: `${incc12.toFixed(2).replace('.', ',')}%`, date: brDateToLabel(inccHist[inccHist.length - 1].data) },
       cdi: { value: parseFloat(cdi[0].valor), label: `${parseFloat(cdi[0].valor).toFixed(2).replace('.', ',')}%`, date: brDateToLabel(cdi[0].data) },

@@ -60,7 +60,13 @@
     font-family:"IBM Plex Mono",monospace;
   }
   .tk-lab{font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--on-dark-soft);}
-  .tk-val{font-size:11.5px; font-weight:700; color:var(--on-dark);}
+  .tk-val{font-size:11.5px; font-weight:700; color:var(--on-dark); transition:color .3s ease;}
+  .tk-val.tk-up{color:#3fdc7f;}
+  .tk-val.tk-down{color:#ff6b6b;}
+  .tk-chg{font-family:"IBM Plex Mono",monospace; font-size:9.5px; font-weight:700; letter-spacing:.02em;}
+  .tk-chg.tk-up{color:#3fdc7f;}
+  .tk-chg.tk-down{color:#ff6b6b;}
+  .tk-chg.tk-flat{color:var(--on-dark-soft); opacity:.7;}
   .tk-dt{font-size:9.5px; color:var(--on-dark-soft); opacity:.65;}
   @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none;} }
   @media (max-width:900px){ .tk-item{padding:0 16px; gap:5px;} .tk-lab{font-size:9px;} .tk-val{font-size:10.5px;} .tk-dt{display:none;} }
@@ -419,8 +425,8 @@
 <div class="market-ticker" id="marketTicker" role="marquee" aria-label="Indicadores de mercado">
   <div class="ticker-track" id="tickerTrack">
     <div class="ticker-set">
-      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
       <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,44%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">jul/26</span></span>
       <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,46%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">jul/26</span></span>
       <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.151,24</span><span class="tk-dt">ago/26</span></span>
@@ -429,8 +435,8 @@
       <span class="tk-item"><span class="tk-lab">Fontes</span><span class="tk-dt" style="opacity:.9;">BCB · B3 · IBGE · FGV · Sinduscon-SC</span></span>
     </div>
     <div class="ticker-set" aria-hidden="true">
-      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
       <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,44%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">jul/26</span></span>
       <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,46%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">jul/26</span></span>
       <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.151,24</span><span class="tk-dt">ago/26</span></span>
@@ -1109,6 +1115,8 @@
   // 3-hour timer while the deck stays open — so a presentation left running across days
   // always shows the latest trading-day close. Both scrolling copies of the ticker carry
   // matching data-metric hooks, so they update together (no stale half on the marquee loop).
+  // USD/BRL and Ibovespa also render the day-over-day change: green + ▲ when the close is
+  // up on the day, red + ▼ when it closed down (direction/changeLabel come from the API).
   // On any failure (offline dev preview, endpoint down, etc.) the static fallback values
   // baked into the HTML stay exactly as they are — the ticker never goes blank or shows "undefined".
   function refreshTicker(){
@@ -1119,8 +1127,18 @@
       Object.keys(data).forEach(function(metric){
         var entry = data[metric];
         if (!entry || !entry.label) return;
-        document.querySelectorAll('[data-metric="' + metric + '"][data-field="val"]').forEach(function(el){ el.textContent = entry.label; });
+        var dir = entry.direction === 'up' || entry.direction === 'down' ? entry.direction : 'flat';
+        document.querySelectorAll('[data-metric="' + metric + '"][data-field="val"]').forEach(function(el){
+          el.textContent = entry.label;
+          el.classList.remove('tk-up', 'tk-down');
+          if (dir !== 'flat') el.classList.add('tk-' + dir);
+        });
         document.querySelectorAll('[data-metric="' + metric + '"][data-field="dt"]').forEach(function(el){ el.textContent = entry.date; });
+        document.querySelectorAll('[data-metric="' + metric + '"][data-field="chg"]').forEach(function(el){
+          el.textContent = entry.changeLabel || '';
+          el.classList.remove('tk-up', 'tk-down', 'tk-flat');
+          el.classList.add('tk-' + dir);
+        });
       });
     }).catch(function(err){
       console.warn('[ticker] live data unavailable, showing last known static values:', err.message);
