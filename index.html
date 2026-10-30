@@ -299,6 +299,7 @@
   .directors{list-style:none; margin:22px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   @media (max-width:900px){ .directors{grid-template-columns:1fr;} }
   .directors li{background:var(--white); padding:20px 24px; min-width:0; display:flex; gap:16px; align-items:flex-start;}
+  .directors li:last-child:nth-child(odd){grid-column:1/-1;}
   .d-photo{width:56px; height:56px; border-radius:50%; object-fit:cover; flex:0 0 auto; background:var(--beige);}
   .d-photo.placeholder{display:flex; align-items:center; justify-content:center; font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--gray); border:1px dashed var(--line);}
   .d-body{min-width:0;}
@@ -425,23 +426,23 @@
 <div class="market-ticker" id="marketTicker" role="marquee" aria-label="Indicadores de mercado">
   <div class="ticker-track" id="tickerTrack">
     <div class="ticker-set">
-      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,44%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">jul/26</span></span>
-      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,46%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">jul/26</span></span>
-      <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.158,88</span><span class="tk-dt">ago/26</span></span>
-      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val" data-metric="cdi" data-field="val">13,90%</span><span class="tk-dt" data-metric="cdi" data-field="dt">set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val" data-metric="igpm12m" data-field="val">2,18%</span><span class="tk-dt" data-metric="igpm12m" data-field="dt">ago/26</span></span>
+      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,42</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">30/out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">169.186 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">29/out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,58%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,66%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.171,96</span><span class="tk-dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val" data-metric="cdi" data-field="val">13,65%</span><span class="tk-dt" data-metric="cdi" data-field="dt">out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val" data-metric="igpm12m" data-field="val">5,25%</span><span class="tk-dt" data-metric="igpm12m" data-field="dt">out/26</span></span>
       <span class="tk-item"><span class="tk-lab">Fontes</span><span class="tk-dt" style="opacity:.9;">BCB · B3 · IBGE · FGV · Sinduscon-SC</span></span>
     </div>
     <div class="ticker-set" aria-hidden="true">
-      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,13</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">185.147 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">04/set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,44%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">jul/26</span></span>
-      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,46%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">jul/26</span></span>
-      <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.158,88</span><span class="tk-dt">ago/26</span></span>
-      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val" data-metric="cdi" data-field="val">13,90%</span><span class="tk-dt" data-metric="cdi" data-field="dt">set/26</span></span>
-      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val" data-metric="igpm12m" data-field="val">2,18%</span><span class="tk-dt" data-metric="igpm12m" data-field="dt">ago/26</span></span>
+      <span class="tk-item"><span class="tk-lab">USD/BRL</span><span class="tk-val" data-metric="usdbrl" data-field="val">R$ 5,42</span><span class="tk-chg tk-flat" data-metric="usdbrl" data-field="chg"></span><span class="tk-dt" data-metric="usdbrl" data-field="dt">30/out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">Ibovespa</span><span class="tk-val" data-metric="ibovespa" data-field="val">169.186 pts</span><span class="tk-chg tk-flat" data-metric="ibovespa" data-field="chg"></span><span class="tk-dt" data-metric="ibovespa" data-field="dt">29/out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IPCA 12m</span><span class="tk-val" data-metric="ipca12m" data-field="val">4,58%</span><span class="tk-dt" data-metric="ipca12m" data-field="dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">INCC-M 12m</span><span class="tk-val" data-metric="inccm12m" data-field="val">6,66%</span><span class="tk-dt" data-metric="inccm12m" data-field="dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">CUB-SC (m² res.)</span><span class="tk-val">R$ 3.171,96</span><span class="tk-dt">set/26</span></span>
+      <span class="tk-item"><span class="tk-lab">CDI a.a.</span><span class="tk-val" data-metric="cdi" data-field="val">13,65%</span><span class="tk-dt" data-metric="cdi" data-field="dt">out/26</span></span>
+      <span class="tk-item"><span class="tk-lab">IGP-M 12m</span><span class="tk-val" data-metric="igpm12m" data-field="val">5,25%</span><span class="tk-dt" data-metric="igpm12m" data-field="dt">out/26</span></span>
       <span class="tk-item"><span class="tk-lab">Fontes</span><span class="tk-dt" style="opacity:.9;">BCB · B3 · IBGE · FGV · Sinduscon-SC</span></span>
     </div>
   </div>
@@ -481,7 +482,7 @@
           <div><span data-i18n="c.m1l">Cobertura</span><strong>Itapema · Porto Belo · Bal. Camboriú</strong></div>
           <div><span data-i18n="c.m2l">Período histórico</span><strong>2021 — 2026</strong></div>
           <div><span data-i18n="c.m3l">Projeção</span><strong>2026 — 2031</strong></div>
-          <div><span data-i18n="c.m4l">Atualizado em</span><strong>Setembro de 2026</strong></div>
+          <div><span data-i18n="c.m4l">Atualizado em</span><strong>Outubro de 2026</strong></div>
         </div>
       </div>
     </section>
@@ -505,11 +506,11 @@
           <div class="stat">
             <div>
               <span class="stat-city">Itapema</span>
-              <div class="stat-fig num">R$ 15.226</div>
-              <div class="stat-fig small num" data-i18n="t.itp.label">Por m² · FipeZap, jun/2026</div>
+              <div class="stat-fig num">R$ 15.340</div>
+              <div class="stat-fig small num" data-i18n="t.itp.label">Por m² · FipeZap, set/2026</div>
               <div class="stat-extra num" data-i18n="t.itp.extra">86.116 hab. · até 800 mil visitantes/verão</div>
             </div>
-            <div class="stat-tag" data-i18n="t.itp.tag">Nº 1 do Brasil em valorização + preço/m²</div>
+            <div class="stat-tag" data-i18n="t.itp.tag">3º maior preço/m² do Brasil</div>
             <div class="stat-beaches">
               <div><b>Meia Praia</b><span class="d num">~4,75 km</span></div>
               <div><b>Centro de Itapema</b><span class="d num">~1,5 km</span></div>
@@ -519,7 +520,7 @@
             <div>
               <span class="stat-city">Balneário Camboriú</span>
               <div class="stat-fig num">151.674 hab.</div>
-              <div class="stat-fig small num">R$ 15.215/m² · jun/2026</div>
+              <div class="stat-fig small num">R$ 15.369/m² · set/2026</div>
               <div class="stat-extra num" data-i18n="t.bc.extra">+2 milhões de turistas / verão</div>
             </div>
             <div class="stat-tag" data-i18n="t.bc.tag">2º maior preço/m² do Brasil</div>
@@ -567,20 +568,20 @@
             </div>
           </div>
           <div>
-            <p class="foot-note" style="margin-top:0; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--ink);" data-i18n="pn.t2">Cidades que mais valorizaram · 12 meses (ago/2026)</p>
+            <p class="foot-note" style="margin-top:0; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--ink);" data-i18n="pn.t2">Cidades que mais valorizaram · 12 meses (set/2026)</p>
             <div class="rank-list">
-              <div class="rank-row"><span class="rank-pos">01</span><span class="rank-city">Vila Velha <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:100%; background:var(--gray-2);"></div></div><span class="rank-val num">+16,87%</span></div>
-              <div class="rank-row"><span class="rank-pos">02</span><span class="rank-city">Vitória <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:59.9%; background:var(--gray-2);"></div></div><span class="rank-val num">+10,10%</span></div>
-              <div class="rank-row"><span class="rank-pos">03</span><span class="rank-city">Florianópolis <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:49.7%; background:#1E8F5E;"></div></div><span class="rank-val num">+8,38%</span></div>
-              <div class="rank-row"><span class="rank-pos">04</span><span class="rank-city">Barueri <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:34.8%; background:var(--gray-2);"></div></div><span class="rank-val num">+5,87%</span></div>
-              <div class="rank-row"><span class="rank-pos">05</span><span class="rank-city">Itajaí <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:32.2%; background:#1E8F5E;"></div></div><span class="rank-val num">+5,44%</span></div>
-              <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">Itapema <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:29.5%; background:#1E8F5E;"></div></div><span class="rank-val num">+4,98%</span></div>
-              <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:28.0%; background:var(--gray-2);"></div></div><span class="rank-val num">+4,73%</span></div>
-              <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Bal. Camboriú <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:16.9%; background:#1E8F5E;"></div></div><span class="rank-val num">+2,86%</span></div>
+              <div class="rank-row"><span class="rank-pos">01</span><span class="rank-city">Vila Velha <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:100%; background:var(--gray-2);"></div></div><span class="rank-val num">+14,76%</span></div>
+              <div class="rank-row"><span class="rank-pos">02</span><span class="rank-city">Vitória <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:80.8%; background:var(--gray-2);"></div></div><span class="rank-val num">+11,93%</span></div>
+              <div class="rank-row"><span class="rank-pos">03</span><span class="rank-city">Florianópolis <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:56.3%; background:#1E8F5E;"></div></div><span class="rank-val num">+8,31%</span></div>
+              <div class="rank-row"><span class="rank-pos">04</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:37.7%; background:var(--gray-2);"></div></div><span class="rank-val num">+5,57%</span></div>
+              <div class="rank-row"><span class="rank-pos">05</span><span class="rank-city">Itajaí <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:35.6%; background:#1E8F5E;"></div></div><span class="rank-val num">+5,25%</span></div>
+              <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">Barueri <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:35.3%; background:var(--gray-2);"></div></div><span class="rank-val num">+5,21%</span></div>
+              <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Itapema <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:29.6%; background:#1E8F5E;"></div></div><span class="rank-val num">+4,37%</span></div>
+              <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Bal. Camboriú <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:22.9%; background:#1E8F5E;"></div></div><span class="rank-val num">+3,38%</span></div>
             </div>
           </div>
         </div>
-        <p class="foot-note" data-i18n="pn.foot">PIB estadual: SEPLAN-SC (Santa Catarina, 2024) e estimativas IBGE/Banco do Brasil para os demais estados (2023–2024, valores aproximados, metodologias mistas). Valorização 12 meses: Índice FipeZap, ago/2026, entre as 10 cidades com o m² residencial mais caro do país — não representa a totalidade das 56 cidades monitoradas pelo índice.</p>
+        <p class="foot-note" data-i18n="pn.foot">PIB estadual: SEPLAN-SC (Santa Catarina, 2024) e estimativas IBGE/Banco do Brasil para os demais estados (2023–2024, valores aproximados, metodologias mistas). Valorização 12 meses: Índice FipeZap, set/2026, entre as 10 cidades com o m² residencial mais caro do país — não representa a totalidade das 56 cidades monitoradas pelo índice.</p>
       </div>
     </section>
 
@@ -679,39 +680,39 @@
     <section class="slide white">
       <div class="slide-inner">
         <span class="eyebrow" data-i18n="rk.eyebrow">06 · Preço &amp; Valorização</span>
-        <h2 data-i18n="rk.h2">Itapema segue à frente de Balneário Camboriú — Vitória assume o topo nacional</h2>
-        <p class="lede" data-i18n="rk.lede">O FipeZap de agosto/2026 (divulgado em set/2026) mostra Vitória (ES) na liderança nacional; Itapema mantém a 2ª posição, à frente de Balneário Camboriú desde jun/2026 — as três formam um grupo isolado acima de R$15 mil/m².</p>
+        <h2 data-i18n="rk.h2">Balneário Camboriú retoma o 2º lugar, com Itapema colada — Vitória segue no topo nacional</h2>
+        <p class="lede" data-i18n="rk.lede">O FipeZap de setembro/2026 (divulgado em out/2026) mostra Vitória (ES) na liderança nacional; Balneário Camboriú retoma a 2ª posição e Itapema passa à 3ª, separadas por apenas R$29/m² — as três formam um grupo isolado acima de R$15 mil/m².</p>
         <div class="badge-row">
-          <div class="badge"><div class="v num">+27%</div><div class="l" data-i18n="rk.b1">Acima de São Paulo</div></div>
-          <div class="badge"><div class="v num">+37%</div><div class="l" data-i18n="rk.b2">Acima do Rio de Janeiro</div></div>
-          <div class="badge"><div class="v num">+105%</div><div class="l" data-i18n="rk.b3">Acima de Porto Alegre</div></div>
+          <div class="badge"><div class="v num">+26%</div><div class="l" data-i18n="rk.b1">Acima de São Paulo</div></div>
+          <div class="badge"><div class="v num">+36%</div><div class="l" data-i18n="rk.b2">Acima do Rio de Janeiro</div></div>
+          <div class="badge"><div class="v num">+103%</div><div class="l" data-i18n="rk.b3">Acima de Porto Alegre</div></div>
         </div>
         <div class="rank-list">
-          <div class="rank-row"><span class="rank-pos">01</span><span class="rank-city">🏆 Vitória <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:100%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 15.650</span></div>
-          <div class="rank-row"><span class="rank-pos">02</span><span class="rank-city">🥈 Itapema <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:98.4%; background:#1E8F5E;"></div></div><span class="rank-val num">R$ 15.403</span></div>
-          <div class="rank-row"><span class="rank-pos">03</span><span class="rank-city">Bal. Camboriú <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:98.0%; background:#B8860B;"></div></div><span class="rank-val num">R$ 15.343</span></div>
-          <div class="rank-row"><span class="rank-pos">04</span><span class="rank-city">Porto Belo <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:94.0%; background:#2563AC;"></div></div><span class="rank-val num">R$ 14.712</span></div>
-          <div class="rank-row"><span class="rank-pos">05</span><span class="rank-city">Florianópolis <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:86.5%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 13.531</span></div>
-          <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">São Paulo <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:77.6%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 12.143</span></div>
-          <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:71.7%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 11.216</span></div>
-          <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Porto Alegre <span class="uf">RS</span></span><div class="rank-track"><div class="rank-fill" style="width:48.0%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 7.510</span></div>
+          <div class="rank-row"><span class="rank-pos">01</span><span class="rank-city">🏆 Vitória <span class="uf">ES</span></span><div class="rank-track"><div class="rank-fill" style="width:100%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 15.905</span></div>
+          <div class="rank-row"><span class="rank-pos">02</span><span class="rank-city">🥈 Bal. Camboriú <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:96.6%; background:#B8860B;"></div></div><span class="rank-val num">R$ 15.369</span></div>
+          <div class="rank-row"><span class="rank-pos">03</span><span class="rank-city">Itapema <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:96.4%; background:#1E8F5E;"></div></div><span class="rank-val num">R$ 15.340</span></div>
+          <div class="rank-row"><span class="rank-pos">04</span><span class="rank-city">Porto Belo <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:92.5%; background:#2563AC;"></div></div><span class="rank-val num">R$ 14.712</span></div>
+          <div class="rank-row"><span class="rank-pos">05</span><span class="rank-city">Florianópolis <span class="uf">SC</span></span><div class="rank-track"><div class="rank-fill" style="width:85.6%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 13.607</span></div>
+          <div class="rank-row"><span class="rank-pos">06</span><span class="rank-city">São Paulo <span class="uf">SP</span></span><div class="rank-track"><div class="rank-fill" style="width:76.7%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 12.206</span></div>
+          <div class="rank-row"><span class="rank-pos">07</span><span class="rank-city">Rio de Janeiro <span class="uf">RJ</span></span><div class="rank-track"><div class="rank-fill" style="width:71.1%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 11.302</span></div>
+          <div class="rank-row"><span class="rank-pos">08</span><span class="rank-city">Porto Alegre <span class="uf">RS</span></span><div class="rank-track"><div class="rank-fill" style="width:47.4%; background:var(--gray-2);"></div></div><span class="rank-val num">R$ 7.545</span></div>
         </div>
-        <p class="foot-note" data-i18n="rk.foot">Fonte: FIPE — Índice FipeZap, Informe de Agosto/2026 (divulgado set/2026). Porto Belo: R$14.712/m² — preço médio das unidades vendidas no 1º semestre de 2026, DWV Inteligência de Mercado (dado interno, metodologia distinta do FipeZap: transações, não anúncios).</p>
+        <p class="foot-note" data-i18n="rk.foot">Fonte: FIPE — Índice FipeZap, Informe de Setembro/2026 (divulgado out/2026). Porto Belo: R$14.712/m² — preço médio das unidades vendidas no 1º semestre de 2026, DWV Inteligência de Mercado (dado interno, metodologia distinta do FipeZap: transações, não anúncios).</p>
 
         <p class="foot-note" style="margin-top:28px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--ink);" data-i18n="rk.t2">Radar mensal · valorização das cidades catarinenses monitoradas pelo FipeZap</p>
         <table>
-          <thead><tr><th data-i18n="rk.th1">Cidade</th><th data-i18n="rk.th2">R$/m²</th><th data-i18n="rk.th3">Var. mês (ago/26)</th><th data-i18n="rk.th4">Var. mês (jul/26)</th><th data-i18n="rk.th5">Var. 12 meses</th></tr></thead>
+          <thead><tr><th data-i18n="rk.th1">Cidade</th><th data-i18n="rk.th2">R$/m²</th><th data-i18n="rk.th3">Var. mês (set/26)</th><th data-i18n="rk.th4">Var. mês (ago/26)</th><th data-i18n="rk.th5">Var. 12 meses</th></tr></thead>
           <tbody>
-            <tr><td><strong data-i18n="rk.c.flo">Florianópolis</strong> <span class="uf">SC</span></td><td class="num">R$ 13.531</td><td class="num" style="color:#1E8F5E;">+0,52%</td><td class="num">+0,71%</td><td class="num">+8,20%</td></tr>
-            <tr><td><strong data-i18n="rk.c.ita">Itajaí</strong> <span class="uf">SC</span></td><td class="num">R$ 13.354</td><td class="num" style="color:#1E8F5E;">+0,40%</td><td class="num">+0,29%</td><td class="num">+4,92%</td></tr>
-            <tr><td><strong data-i18n="rk.c.blu">Blumenau</strong> <span class="uf">SC</span></td><td class="num">R$ 8.177</td><td class="num" style="color:#1E8F5E;">+0,40%</td><td class="num">+0,89%</td><td class="num">+9,60%</td></tr>
-            <tr><td><strong data-i18n="rk.c.bc">Balneário Camboriú</strong> <span class="uf">SC</span></td><td class="num">R$ 15.343</td><td class="num">+0,31%</td><td class="num">+0,44%</td><td class="num">+2,82%</td></tr>
-            <tr><td><strong data-i18n="rk.c.itp">Itapema</strong> <span class="uf">SC</span></td><td class="num">R$ 15.403</td><td class="num" style="color:#B8860B;">−0,00%</td><td class="num">+0,50%</td><td class="num">+4,85%</td></tr>
-            <tr><td><strong data-i18n="rk.c.sj">São José</strong> <span class="uf">SC</span></td><td class="num">R$ 9.093</td><td class="num" style="color:#B8860B;">−0,01%</td><td class="num">+0,19%</td><td class="num">+6,14%</td></tr>
+            <tr><td><strong data-i18n="rk.c.ita">Itajaí</strong> <span class="uf">SC</span></td><td class="num">R$ 13.453</td><td class="num" style="color:#1E8F5E;">+0,74%</td><td class="num">+0,40%</td><td class="num">+5,25%</td></tr>
+            <tr><td><strong data-i18n="rk.c.flo">Florianópolis</strong> <span class="uf">SC</span></td><td class="num">R$ 13.607</td><td class="num" style="color:#1E8F5E;">+0,56%</td><td class="num">+0,52%</td><td class="num">+8,31%</td></tr>
+            <tr><td><strong data-i18n="rk.c.blu">Blumenau</strong> <span class="uf">SC</span></td><td class="num">R$ 8.202</td><td class="num" style="color:#1E8F5E;">+0,30%</td><td class="num">+0,40%</td><td class="num">+9,06%</td></tr>
+            <tr><td><strong data-i18n="rk.c.sj">São José</strong> <span class="uf">SC</span></td><td class="num">R$ 9.110</td><td class="num">+0,19%</td><td class="num">−0,01%</td><td class="num">+5,45%</td></tr>
+            <tr><td><strong data-i18n="rk.c.bc">Balneário Camboriú</strong> <span class="uf">SC</span></td><td class="num">R$ 15.369</td><td class="num">+0,17%</td><td class="num">+0,31%</td><td class="num">+3,38%</td></tr>
+            <tr><td><strong data-i18n="rk.c.itp">Itapema</strong> <span class="uf">SC</span></td><td class="num">R$ 15.340</td><td class="num" style="color:#B8860B;">−0,41%</td><td class="num">−0,00%</td><td class="num">+4,37%</td></tr>
             <tr><td><strong data-i18n="rk.c.pb">Porto Belo</strong> <span class="uf">SC</span></td><td class="num">R$ 14.712</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
           </tbody>
         </table>
-        <p class="foot-note" data-i18n="rk.t2foot">Fonte: FIPE — Índice FipeZap, Informe de Agosto/2026 (PDF oficial, fipe.org.br), variação mensal ago/26 vs. jul/26 e acumulado 12 meses. Ordenado pela maior valorização no mês. <strong>Destaque: Itapema teve o pior desempenho mensal do grupo em ago/26 (variação ~0%), enquanto Florianópolis, Itajaí e Blumenau aceleraram</strong> — é esse movimento que tirou Itapema do 1º lugar nacional (ver ranking acima). Porto Belo não integra a amostra do FipeZap; valor de referência é da DWV Inteligência de Mercado (1º sem. 2026), não comparável mês a mês. Atualizado mensalmente mediante revisão — ver data no rodapé da capa.</p>
+        <p class="foot-note" data-i18n="rk.t2foot">Fonte: FIPE — Índice FipeZap, Informe de Setembro/2026 (PDF oficial, fipe.org.br), variação mensal set/26 vs. ago/26 e acumulado 12 meses. Ordenado pela maior valorização no mês. <strong>Destaque: Itapema foi a única do grupo a cair em set/26 (−0,41%), enquanto Itajaí liderou o mês (+0,74%)</strong> — foi esse movimento que devolveu a Balneário Camboriú o 2º lugar nacional (ver ranking acima). Porto Belo não integra a amostra do FipeZap; valor de referência é da DWV Inteligência de Mercado (1º sem. 2026), não comparável mês a mês. Atualizado mensalmente mediante revisão — ver data no rodapé da capa.</p>
       </div>
     </section>
 
@@ -772,7 +773,6 @@
           <li><img class="d-photo" src="assets/img/diretoria/caio-perrone.png" alt="Dr. Caio Perrone"><div class="d-body"><div class="d-name">Dr. Caio Perrone</div><div class="d-role" data-i18n="dr.r5">Jurídico, Pessoas e Governança</div><div class="d-bio" data-i18n="dr.b5">Advogado, especialista em Direito Imobiliário pela FGV Law SP; membro do IBRADIM. Foco em solidez jurídica, gestão de pessoas e governança corporativa.</div></div></li>
           <li><img class="d-photo" src="assets/img/diretoria/andre-reis.png" alt="André Reis"><div class="d-body"><div class="d-name">André Reis</div><div class="d-role" data-i18n="dr.r3">Marketing e Comercial</div><div class="d-bio" data-i18n="dr.b3">+15 anos em construção civil; especialista em CRM, vendas e posicionamento de marca.</div></div></li>
           <li><img class="d-photo" src="assets/img/diretoria/marcelo-midoux.png" alt="Marcelo Midoux"><div class="d-body"><div class="d-name">Marcelo Midoux</div><div class="d-role" data-i18n="dr.r6">Financeira</div><div class="d-bio" data-i18n="dr.b6">+20 anos em finanças e controladoria, com passagem por uma das Big Four (PwC). Planejamento financeiro, automação de processos e gestão de equipes.</div></div></li>
-          <li><img class="d-photo" src="assets/img/diretoria/ricardo-rocha-leal.png" alt="Ricardo Rocha Leal"><div class="d-body"><div class="d-name">Ricardo Rocha Leal</div><div class="d-role" data-i18n="dr.r4">Incorporação</div><div class="d-bio" data-i18n="dr.b4">+20 anos, +150 empreendimentos entregues no Brasil. Autor de 5 livros, professor de MBA.</div></div></li>
         </ul>
       </div>
     </section>
@@ -880,16 +880,16 @@
         <p class="lede" data-i18n="ind.lede">Variação anual de cada indicador, 2021–2026 (parcial) — um gráfico por ativo, para ver a tendência de cada um sem cruzar linhas.</p>
         <div class="mchart-grid">
           <div class="mchart">
-            <div class="mchart-h"><span class="mchart-name">IPCA</span><span class="mchart-val num">3,4%</span></div>
+            <div class="mchart-h"><span class="mchart-name">IPCA</span><span class="mchart-val num">4,0%</span></div>
             <svg viewBox="0 0 270 118">
               <rect x="20" y="16.8" width="28" height="73.2" fill="var(--gray-2)"/>
               <rect x="60" y="48.0" width="28" height="42.0" fill="var(--gray-2)"/>
               <rect x="100" y="56.4" width="28" height="33.6" fill="var(--gray-2)"/>
               <rect x="140" y="54.9" width="28" height="35.1" fill="var(--gray-2)"/>
               <rect x="180" y="59.0" width="28" height="31.0" fill="var(--gray-2)"/>
-              <rect x="220" y="65.0" width="28" height="25.0" fill="var(--black)"/>
+              <rect x="220" y="61.4" width="28" height="28.6" fill="var(--black)"/>
               <text x="34" y="14" text-anchor="middle" class="bar-val num" style="font-size:9px;">10,1%</text>
-              <text x="234" y="63" text-anchor="middle" class="bar-val num" style="font-size:9px;">3,4%</text>
+              <text x="234" y="59" text-anchor="middle" class="bar-val num" style="font-size:9px;">4,0%</text>
               <text x="34" y="102" text-anchor="middle" class="axis-lab" style="font-size:9px;">21</text>
               <text x="74" y="102" text-anchor="middle" class="axis-lab" style="font-size:9px;">22</text>
               <text x="114" y="102" text-anchor="middle" class="axis-lab" style="font-size:9px;">23</text>
@@ -900,14 +900,14 @@
             <div class="mchart-range" data-i18n="ind.r1">Inflação · queda consistente</div>
           </div>
           <div class="mchart">
-            <div class="mchart-h"><span class="mchart-name" data-i18n="ind.n2">Poupança</span><span class="mchart-val num">5,5%</span></div>
+            <div class="mchart-h"><span class="mchart-name" data-i18n="ind.n2">Poupança</span><span class="mchart-val num">6,9%</span></div>
             <svg viewBox="0 0 270 118">
               <rect x="20" y="63.4" width="28" height="26.6" fill="var(--gray-2)"/>
               <rect x="60" y="19.8" width="28" height="70.2" fill="var(--gray-2)"/>
               <rect x="100" y="18.5" width="28" height="71.5" fill="var(--gray-2)"/>
               <rect x="140" y="27.5" width="28" height="62.5" fill="var(--gray-2)"/>
               <rect x="180" y="16.6" width="28" height="73.4" fill="var(--gray-2)"/>
-              <rect x="220" y="41.5" width="28" height="48.5" fill="var(--black)"/>
+              <rect x="220" y="29.4" width="28" height="60.6" fill="var(--black)"/>
               <text x="34" y="61" text-anchor="middle" class="bar-val num" style="font-size:9px;">3,0%</text>
               <text x="194" y="14" text-anchor="middle" class="bar-val num" style="font-size:9px;">8,3%</text>
               <text x="34" y="102" text-anchor="middle" class="axis-lab" style="font-size:9px;">21</text>
@@ -920,7 +920,7 @@
             <div class="mchart-range" data-i18n="ind.r2">Renda fixa · estável em alta</div>
           </div>
           <div class="mchart">
-            <div class="mchart-h"><span class="mchart-name">Ibovespa</span><span class="mchart-val num">+4,0%</span></div>
+            <div class="mchart-h"><span class="mchart-name">Ibovespa</span><span class="mchart-val num">+5,0%</span></div>
             <svg viewBox="0 0 270 118">
               <line x1="16" y1="66.92" x2="252" y2="66.92" class="grid-line"/>
               <rect x="20" y="66.92" width="28" height="18.36" fill="var(--gray-2)"/>
@@ -928,7 +928,7 @@
               <rect x="100" y="32.64" width="28" height="34.28" fill="var(--gray-2)"/>
               <rect x="140" y="66.92" width="28" height="15.94" fill="var(--gray-2)"/>
               <rect x="180" y="14.46" width="28" height="52.46" fill="var(--gray-2)"/>
-              <rect x="220" y="60.80" width="28" height="6.12" fill="var(--black)"/>
+              <rect x="220" y="59.23" width="28" height="7.69" fill="var(--black)"/>
               <text x="194" y="12" text-anchor="middle" class="bar-val num" style="font-size:9px;">+34,1%</text>
               <text x="34" y="95" text-anchor="middle" class="bar-val num" style="font-size:9px;">-11,9%</text>
               <text x="34" y="102" text-anchor="middle" class="axis-lab" style="font-size:9px; display:none;"></text>
@@ -942,7 +942,7 @@
             <div class="mchart-range" data-i18n="ind.r3">Bolsa · alta volatilidade</div>
           </div>
           <div class="mchart">
-            <div class="mchart-h"><span class="mchart-name" data-i18n="ind.n4">Dólar</span><span class="mchart-val num">-5,6%</span></div>
+            <div class="mchart-h"><span class="mchart-name" data-i18n="ind.n4">Dólar</span><span class="mchart-val num">-1,5%</span></div>
             <svg viewBox="0 0 270 118">
               <line x1="16" y1="63.96" x2="252" y2="63.96" class="grid-line"/>
               <rect x="20" y="50.07" width="28" height="13.89" fill="var(--gray-2)"/>
@@ -950,7 +950,7 @@
               <rect x="100" y="63.96" width="28" height="14.99" fill="var(--gray-2)"/>
               <rect x="140" y="13.18" width="28" height="50.78" fill="var(--gray-2)"/>
               <rect x="180" y="63.96" width="28" height="20.83" fill="var(--gray-2)"/>
-              <rect x="220" y="63.96" width="28" height="10.42" fill="var(--black)"/>
+              <rect x="220" y="63.96" width="28" height="2.69" fill="var(--black)"/>
               <text x="154" y="11" text-anchor="middle" class="bar-val num" style="font-size:9px;">+27,3%</text>
               <text x="194" y="97" text-anchor="middle" class="bar-val num" style="font-size:9px;">-11,2%</text>
               <text x="34" y="112" text-anchor="middle" class="axis-lab" style="font-size:9px;">21</text>
@@ -963,7 +963,7 @@
             <div class="mchart-range" data-i18n="ind.r4">Câmbio · sem tendência clara</div>
           </div>
         </div>
-        <p class="foot-note" data-i18n="ind.foot">2026 parcial (até agosto). Barra em preto = ano mais recente. Fontes: Dados de Mercado (IPCA), Brasil Indicadores (Poupança), B3 (Ibovespa), Banco Central (Dólar).</p>
+        <p class="foot-note" data-i18n="ind.foot">2026 parcial (IPCA até setembro; demais até outubro). Barra em preto = ano mais recente. Fontes: Banco Central (IPCA, Poupança, Dólar), B3 (Ibovespa).</p>
       </div>
     </section>
 
@@ -976,12 +976,12 @@
 
         <div class="vbar-list">
           <div class="vbar-row"><div class="vbar-name">Itapema (m²)<span class="sub" data-i18n="val.sub1">jun/19–jun/24, real</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill city" style="left:7.7%; width:87.7%;"></div></div><div class="vbar-val num">114%</div></div>
-          <div class="vbar-row"><div class="vbar-name">CDI<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:64.5%;"></div></div><div class="vbar-val num">83,9%</div></div>
+          <div class="vbar-row"><div class="vbar-name">CDI<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:67.5%;"></div></div><div class="vbar-val num">87,7%</div></div>
           <div class="vbar-row"><div class="vbar-name">Porto Belo (m²)<span class="sub" data-i18n="val.sub3">projeção 2026–2030</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill vproj" style="left:7.7%; width:25.9%;"></div></div><div class="vbar-val num">34%</div></div>
-          <div class="vbar-row"><div class="vbar-name">Balneário Camboriú (m²)<span class="sub" data-i18n="val.sub4">mar/22–jun/26, real</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill city" style="left:7.7%; width:41.5%;"></div></div><div class="vbar-val num">54%</div></div>
-          <div class="vbar-row"><div class="vbar-name" data-i18n="ind.n2b">Poupança<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:36.6%;"></div></div><div class="vbar-val num">47,6%</div></div>
-          <div class="vbar-row"><div class="vbar-name">Ibovespa<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:39.0%;"></div></div><div class="vbar-val num">50,7%</div></div>
-          <div class="vbar-row"><div class="vbar-name" data-i18n="ind.n4b">Dólar<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.1%; width:0.6%;"></div></div><div class="vbar-val num">-0,8%</div></div>
+          <div class="vbar-row"><div class="vbar-name">Balneário Camboriú (m²)<span class="sub" data-i18n="val.sub4">mar/22–set/26, real</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill city" style="left:7.7%; width:42.3%;"></div></div><div class="vbar-val num">55%</div></div>
+          <div class="vbar-row"><div class="vbar-name" data-i18n="ind.n2b">Poupança<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:37.5%;"></div></div><div class="vbar-val num">48,7%</div></div>
+          <div class="vbar-row"><div class="vbar-name">Ibovespa<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:32.2%;"></div></div><div class="vbar-val num">41,8%</div></div>
+          <div class="vbar-row"><div class="vbar-name" data-i18n="ind.n4b">Dólar<span class="sub" data-i18n="val.sub2">2021–2026 (parcial)</span></div><div class="vbar-track"><div class="vbar-zero" style="left:7.7%;"></div><div class="vbar-fill bench" style="left:7.7%; width:3.3%;"></div></div><div class="vbar-val num">+4,3%</div></div>
         </div>
         <div class="vbar-axis">
           <div></div>
@@ -993,7 +993,7 @@
           <span><span class="sw" style="background:repeating-linear-gradient(45deg,var(--black),var(--black) 3px,var(--gray-2) 3px,var(--gray-2) 7px);"></span><span data-i18n="val.leg2">Projeção (não histórico)</span></span>
           <span><span class="sw" style="background:var(--gray-2);"></span><span data-i18n="val.leg3">Benchmark financeiro</span></span>
         </div>
-        <p class="foot-note" data-i18n-html="val.foot">Itapema: R$6.890/m² (jun/2019) → R$12.962/m² (jun/2024), +114% — Índice FipeZap, relatório oficial <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE jun/2024 (PDF)</a>, conforme noticiado por <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9.888/m² (mar/2022) → R$15.228/m² (jun/2026) — <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>. CDI acumulado 2021–2026: 4,42% · 12,39% · 13,04% · 10,88% · 14,32% · 9,37% (parcial até 01/set/2026) = +83,9% — Banco Central (SGS), cálculo próprio por composição mensal. Ibovespa acumulado 2021–2026: -12,14% · +4,97% · +21,96% · -10,36% · +33,95% · +11,54% (parcial) = +50,7% — fechamentos de dezembro de cada ano e 01/set/2026, B3. Poupança acumulada 2021–2026: +47,6% (regra vigente, cálculo próprio com base na série do Banco Central). Dólar (USD/BRL) acumulado 2021–2026: +7,39% · -6,50% · -7,21% · +27,91% · -11,14% · -6,28% (parcial) = -0,8% — PTAX, Banco Central. CDB típico rende 100–110% do CDI. Porto Belo: projeção de cenário base, não garantia de rentabilidade. Fontes: B3, Banco Central (SGS), FipeZap.</p>
+        <p class="foot-note" data-i18n-html="val.foot">Itapema: R$6.890/m² (jun/2019) → R$12.962/m² (jun/2024), +114% — Índice FipeZap, relatório oficial <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE jun/2024 (PDF)</a>, conforme noticiado por <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9.888/m² (mar/2022, <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>) → R$15.369/m² (set/2026, FipeZap), +55%. CDI acumulado 2021–2026: 4,42% · 12,39% · 13,04% · 10,88% · 14,32% · 11,63% (parcial até out/2026) = +87,7% — Banco Central (SGS), cálculo próprio por composição mensal. Ibovespa acumulado 2021–2026: -12,14% · +4,97% · +21,96% · -10,36% · +33,95% · +5,00% (parcial) = +41,8% — fechamentos de dezembro de cada ano e 29/out/2026, B3. Poupança acumulada 2021–2026: +48,7% (regra vigente, cálculo próprio com base na série do Banco Central). Dólar (USD/BRL) acumulado 2021–2026: +7,39% · -6,50% · -7,21% · +27,91% · -11,14% · -1,48% (parcial) = +4,3% — PTAX, Banco Central. CDB típico rende 100–110% do CDI. Porto Belo: projeção de cenário base, não garantia de rentabilidade. Fontes: B3, Banco Central (SGS), FipeZap.</p>
       </div>
     </section>
 
@@ -1072,7 +1072,7 @@
         <h2 data-i18n="cta.h2">ABC.inc — Onde sua Experiência Começa</h2>
         <div class="cta-grid">
           <ol class="argu">
-            <li><span class="n">01</span><div><strong data-i18n="cta.a1s">Exclusividade comprovada por dado.</strong><span data-i18n="cta.a1p">Itapema segue entre as 3 praças mais caras do Brasil — à frente de Balneário Camboriú.</span></div></li>
+            <li><span class="n">01</span><div><strong data-i18n="cta.a1s">Exclusividade comprovada por dado.</strong><span data-i18n="cta.a1p">Itapema segue entre as 3 praças mais caras do Brasil — a menos de R$30/m² de Balneário Camboriú.</span></div></li>
             <li><span class="n">02</span><div><strong data-i18n="cta.a2s">Pipeline garantido.</strong><span data-i18n="cta.a2p">12,4 milhões de m² em land bank, 2.200 unidades já entregues.</span></div></li>
             <li><span class="n">03</span><div><strong data-i18n="cta.a3s">Porto Belo como entrada.</strong><span data-i18n="cta.a3p">Projeção de valorização de até 64% até 2030.</span></div></li>
             <li><span class="n">04</span><div><strong data-i18n="cta.a4s">DNA de produto autoral.</strong><span>Studio Arthur Casas, Triptyque, Fernanda Marques.</span></div></li>
@@ -1180,7 +1180,7 @@
       't.h2':'The fastest-appreciating region in Brazil is in your backyard',
       't.lede':'Santa Catarina has grown above the national average for three consecutive years. The Itapema–Porto Belo–Balneário Camboriú corridor is the epicenter of that expansion.',
       't.sc.label':'GDP growth · 2024', 't.sc.extra':'8.18M pop. · GDP ~R$531B', 't.sc.tag':'6th-largest GDP in Brazil · 4.6% of national GDP',
-      't.itp.label':'Per sqm · FipeZap, Jun/2026', 't.itp.extra':'86,116 pop. · up to 800K summer visitors', 't.itp.tag':'#1 in Brazil in appreciation + price/sqm',
+      't.itp.label':'Per sqm · FipeZap, Sep/2026', 't.itp.extra':'86,116 pop. · up to 800K summer visitors', 't.itp.tag':'3rd-highest price/sqm in Brazil',
       't.bc.extra':'+2 million tourists / summer', 't.bc.tag':'2nd-highest price/sqm in Brazil',
       't.pb.extra':'R$2.5B in new launches · H1 2026', 't.pb.tag':'30th Fastest-Growing City in Brazil · IBGE Ranking, 2022 Census',
       't.foot':'Sources: IBGE, SEPLAN-SC, FipeZap, DWV Market Intelligence, Itapema and Porto Belo city governments.',
@@ -1197,8 +1197,8 @@
       'pn.h2':'Where Santa Catarina stands on Brazil’s economic map',
       'pn.lede':'Brazil’s 6th-largest economy and the epicenter of national real estate appreciation over the past 12 months.',
       'pn.b1':'Largest GDP in Brazil', 'pn.b2':'Santa Catarina GDP · 2024', 'pn.b3':'Featured 12-month appreciation cities are from Santa Catarina',
-      'pn.t1':'GDP ranking by state · 2023–2024', 'pn.t2':'Cities with the highest appreciation · 12 months (Aug/2026)',
-      'pn.foot':'State GDP: SEPLAN-SC (Santa Catarina, 2024) and IBGE/Banco do Brasil estimates for other states (2023–2024, approximate figures, mixed methodologies). 12-month appreciation: FipeZap Index, Aug/2026, among the 10 cities with the most expensive residential sqm in the country — not representative of all 56 cities tracked by the index.',
+      'pn.t1':'GDP ranking by state · 2023–2024', 'pn.t2':'Cities with the highest appreciation · 12 months (Sep/2026)',
+      'pn.foot':'State GDP: SEPLAN-SC (Santa Catarina, 2024) and IBGE/Banco do Brasil estimates for other states (2023–2024, approximate figures, mixed methodologies). 12-month appreciation: FipeZap Index, Sep/2026, among the 10 cities with the most expensive residential sqm in the country — not representative of all 56 cities tracked by the index.',
       'co.eyebrow':'03 · Construction Activity', 'co.h2':'Where construction is running hottest',
       'co.lede':'Itapema and Porto Belo lead in simultaneous construction volume; Balneário Camboriú bets on fewer, monumental-scale projects.',
       'co.itp.label':'Ongoing construction sites', 'co.itp.extra':'~200 new projects in approval phase', 'co.itp.tag':'~197 developers/builders active in the city',
@@ -1214,14 +1214,14 @@
       'cip.nv.t':'appreciation in logistics warehouses over 10 years', 'cip.nv.p':'Brazil’s largest private container terminal and a 12km waterfront still largely unverticalized for residential use.',
       'cip.pn.t':'World + international environmental certification', 'cip.pn.p':'Proximity to Balneário Camboriú and Itajaí, established tourism and expanding infrastructure.',
       'cip.foot':'5-year nominal appreciation (2020–Jul/2025): Inteligência Financeira ranking, via i9Vale — Itapema +86% (+41% real), Itajaí +81.65% (+37.74% real), Balneário Camboriú +80%+ (+36%+ real), São José +74.54% (+32.35% real), Florianópolis +57.40% (+19.35% real). National ranking: 1st Itapema/SC, 2nd Vila Velha/ES, 3rd Itajaí/SC, 4th Balneário Camboriú/SC, 5th São José/SC, 6th Vitória/ES, 7th Goiânia/GO, 8th Maceió/AL, 9th Florianópolis/SC, 10th São José dos Campos/SP. Bombinhas: Lenon Imóveis/Zeni Imóveis. Navegantes: Rafael Cassio Imóveis. Penha: PANROTAS.',
-      'rk.eyebrow':'06 · Price &amp; Appreciation', 'rk.h2':'Itapema stays ahead of Balneário Camboriú — Vitória takes the national lead',
-      'rk.lede':'FipeZap\'s August/2026 index (released Sep/2026) shows Vitória (ES) in the national lead; Itapema holds 2nd place, ahead of Balneário Camboriú since Jun/2026 — the three form an isolated group above R$15,000/sqm.',
+      'rk.eyebrow':'06 · Price &amp; Appreciation', 'rk.h2':'Balneário Camboriú retakes 2nd place, with Itapema right behind — Vitória stays on top nationally',
+      'rk.lede':'FipeZap\'s September/2026 index (released Oct/2026) shows Vitória (ES) in the national lead; Balneário Camboriú retakes 2nd place and Itapema moves to 3rd, just R$29/sqm apart — the three form an isolated group above R$15,000/sqm.',
       'rk.b1':'Above São Paulo', 'rk.b2':'Above Rio de Janeiro', 'rk.b3':'Above Porto Alegre',
-      'rk.foot':'Source: FIPE — FipeZap Index, August/2026 Report (released Sep/2026). Porto Belo: R$14,712/sqm — average price of units sold in H1 2026, DWV Market Intelligence (internal figure, different methodology from FipeZap: transactions, not listings).',
+      'rk.foot':'Source: FIPE — FipeZap Index, September/2026 Report (released Oct/2026). Porto Belo: R$14,712/sqm — average price of units sold in H1 2026, DWV Market Intelligence (internal figure, different methodology from FipeZap: transactions, not listings).',
       'rk.t2':'Monthly radar · appreciation across FipeZap-monitored Santa Catarina cities',
-      'rk.th1':'City', 'rk.th2':'R$/sqm', 'rk.th3':'Monthly var. (Aug/26)', 'rk.th4':'Monthly var. (Jul/26)', 'rk.th5':'12-month var.',
+      'rk.th1':'City', 'rk.th2':'R$/sqm', 'rk.th3':'Monthly var. (Sep/26)', 'rk.th4':'Monthly var. (Aug/26)', 'rk.th5':'12-month var.',
       'rk.c.flo':'Florianópolis', 'rk.c.ita':'Itajaí', 'rk.c.blu':'Blumenau', 'rk.c.bc':'Balneário Camboriú', 'rk.c.itp':'Itapema', 'rk.c.sj':'São José', 'rk.c.pb':'Porto Belo',
-      'rk.t2foot':'Source: FIPE — FipeZap Index, August/2026 Report (official PDF, fipe.org.br), Aug/26 vs. Jul/26 monthly variation and 12-month accumulated. Sorted by highest monthly appreciation. <strong>Highlight: Itapema posted the group\'s weakest monthly performance in Aug/26 (~0% change), while Florianópolis, Itajaí and Blumenau accelerated</strong> — this is the shift that cost Itapema the national #1 spot (see ranking above). Porto Belo is not part of FipeZap\'s sample; its reference value comes from DWV Market Intelligence (H1 2026), not month-to-month comparable. Updated monthly under human review — see date in the cover footer.',
+      'rk.t2foot':'Source: FIPE — FipeZap Index, September/2026 Report (official PDF, fipe.org.br), Sep/26 vs. Aug/26 monthly variation and 12-month accumulated. Sorted by highest monthly appreciation. <strong>Highlight: Itapema was the only city in the group to fall in Sep/26 (−0.41%), while Itajaí led the month (+0.74%)</strong> — this is the shift that gave Balneário Camboriú back the national #2 spot (see ranking above). Porto Belo is not part of FipeZap\'s sample; its reference value comes from DWV Market Intelligence (H1 2026), not month-to-month comparable. Updated monthly under human review — see date in the cover footer.',
       'dv.eyebrow':'07 · Appreciation Drivers', 'dv.h2':'Infrastructure and demand sustaining the cycle',
       'dv.d1.tag':'85% complete', 'dv.d1.p':'73 km highway duplication linking the coast to western Santa Catarina — R$1.7B invested.',
       'dv.d2.tag':'R$9B in returns', 'dv.d2.p':'Bridges and frontage roads unlocking bottlenecks between BC, Itajaí and Navegantes.',
@@ -1235,7 +1235,6 @@
       'dr.b1':'In real estate since age 16, in Itapema. Built the Group into one of Southern Brazil’s leading developers.',
       'dr.r2':'Founding Partner &amp; Co-CEO', 'dr.b2':'Administrative and operational management, focused on efficiency, governance and sustainability.',
       'dr.r3':'Marketing &amp; Sales', 'dr.b3':'15+ years in construction; specialist in CRM, sales and brand positioning.',
-      'dr.r4':'Development', 'dr.b4':'20+ years, 150+ developments delivered across Brazil. Author of 5 books, MBA professor.',
       'dr.r5':'Legal, People &amp; Governance', 'dr.b5':'Lawyer specialized in Real Estate Law (FGV Law SP); member of IBRADIM. Focused on legal solidity, people management and corporate governance.',
       'dr.r6':'Finance', 'dr.b6':'20+ years in finance and controllership, including a Big Four firm (PwC). Financial planning, process automation and team management.',
       'pa.eyebrow':'11 · Portfolio', 'pa.lede':'High-end vertical developments — from launch to delivery.',
@@ -1272,12 +1271,12 @@
       'ind.lede':'Annual variation of each indicator, 2021–2026 (partial) — one chart per asset, so you can see each trend without crossing lines.',
       'ind.n2':'Savings', 'ind.n2b':'Savings', 'ind.n4':'USD', 'ind.n4b':'USD',
       'ind.r1':'Inflation · consistent decline', 'ind.r2':'Fixed income · steadily up', 'ind.r3':'Stock market · high volatility', 'ind.r4':'FX · no clear trend',
-      'ind.foot':'2026 partial (through August). Black bar = most recent year. Sources: Dados de Mercado (IPCA), Brasil Indicadores (Savings), B3 (Ibovespa), Banco Central (USD).',
+      'ind.foot':'2026 partial (IPCA through September; others through October). Black bar = most recent year. Sources: Banco Central (IPCA, Savings, USD), B3 (Ibovespa).',
       'val.eyebrow':'16 · Appreciation Curve', 'val.h2':'Itapema as the benchmark: +114% in 5 years',
       'val.lede':'Cumulative appreciation, each asset over its real period — Itapema leads even ahead of the CDI, fixed income’s strongest benchmark in recent years.',
-      'val.sub1':'Jun/19–Jun/24, actual', 'val.sub2':'2021–2026 (partial)', 'val.sub3':'2026–2030 projection', 'val.sub4':'Mar/22–Jun/26, actual',
+      'val.sub1':'Jun/19–Jun/24, actual', 'val.sub2':'2021–2026 (partial)', 'val.sub3':'2026–2030 projection', 'val.sub4':'Mar/22–Sep/26, actual',
       'val.leg1':'Cities (actual data)', 'val.leg2':'Projection (not historical)', 'val.leg3':'Financial benchmark',
-      'val.foot':'Itapema: R$6,890/sqm (Jun/2019) → R$12,962/sqm (Jun/2024), +114% — FipeZap Index, official <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE report Jun/2024 (PDF)</a>, as reported by <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9,888/sqm (Mar/2022) → R$15,228/sqm (Jun/2026) — <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>. Cumulative CDI 2021–2026: 4.42% · 12.39% · 13.04% · 10.88% · 14.32% · 9.37% (partial through Sep/1/2026) = +83.9% — Banco Central (SGS), own monthly-compounding calculation. Cumulative Ibovespa 2021–2026: -12.14% · +4.97% · +21.96% · -10.36% · +33.95% · +11.54% (partial) = +50.7% — December closes each year and Sep/1/2026, B3. Cumulative savings account (Poupança) 2021–2026: +47.6% (current rule, own calculation based on the Banco Central series). Cumulative USD/BRL 2021–2026: +7.39% · -6.50% · -7.21% · +27.91% · -11.14% · -6.28% (partial) = -0.8% — PTAX, Banco Central. Typical CDB yields 100–110% of CDI. Porto Belo: base-case projection, not a guarantee of returns. Sources: B3, Banco Central (SGS), FipeZap.',
+      'val.foot':'Itapema: R$6,890/sqm (Jun/2019) → R$12,962/sqm (Jun/2024), +114% — FipeZap Index, official <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE report Jun/2024 (PDF)</a>, as reported by <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9,888/sqm (Mar/2022, <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>) → R$15,369/sqm (Sep/2026, FipeZap), +55%. Cumulative CDI 2021–2026: 4.42% · 12.39% · 13.04% · 10.88% · 14.32% · 11.63% (partial through Oct/2026) = +87.7% — Banco Central (SGS), own monthly-compounding calculation. Cumulative Ibovespa 2021–2026: -12.14% · +4.97% · +21.96% · -10.36% · +33.95% · +5.00% (partial) = +41.8% — December closes each year and Oct/29/2026, B3. Cumulative savings account (Poupança) 2021–2026: +48.7% (current rule, own calculation based on the Banco Central series). Cumulative USD/BRL 2021–2026: +7.39% · -6.50% · -7.21% · +27.91% · -11.14% · -1.48% (partial) = +4.3% — PTAX, Banco Central. Typical CDB yields 100–110% of CDI. Porto Belo: base-case projection, not a guarantee of returns. Sources: B3, Banco Central (SGS), FipeZap.',
       'pj.eyebrow':'17 · Market Outlook 2026–2031', 'pj.h2':'Porto Belo is the next appreciation frontier',
       'pj.s1lab':'Base Case · Porto Belo 2030', 'pj.s1delta':'+34% over current value',
       'pj.s2lab':'Optimistic Case · Porto Belo 2030', 'pj.s2delta':'+64% over current value',
@@ -1290,7 +1289,7 @@
       'vi.eyebrow':'09 · Institutional Presentation', 'vi.cap':'The Group’s institutional video, narrated in English.',
       'ct.eyebrow':'19 · Content &amp; Social Media', 'ct.h2':'Discover our Developments', 'ct.cap1':'Content 01', 'ct.cap2':'Content 02',
       'cta.eyebrow':'20 · Sales Action', 'cta.h2':'ABC.inc — Where Your Experience Begins', 'cta.credit':'Gourmet terrace with ocean view · ABC.inc development',
-      'cta.a1s':'Exclusivity proven by data.', 'cta.a1p':'Itapema stays among Brazil\'s 3 most expensive markets — ahead of Balneário Camboriú.',
+      'cta.a1s':'Exclusivity proven by data.', 'cta.a1p':'Itapema stays among Brazil\'s 3 most expensive markets — less than R$30/sqm behind Balneário Camboriú.',
       'cta.a2s':'Guaranteed pipeline.', 'cta.a2p':'12.4 million sqm in land bank, 2,200 units already delivered.',
       'cta.a3s':'Porto Belo as the entry point.', 'cta.a3p':'Projected appreciation of up to 64% by 2030.',
       'cta.a4s':'Signature-design DNA.',
@@ -1307,7 +1306,7 @@
       't.h2':'La región que más se valoriza en Brasil está en tu propio patio',
       't.lede':'Santa Catarina crece por encima de la media nacional desde hace tres años consecutivos. El eje Itapema–Porto Belo–Balneário Camboriú concentra el epicentro de esa expansión.',
       't.sc.label':'Crecimiento del PIB · 2024', 't.sc.extra':'8,18M hab. · PIB ~R$531 mil M', 't.sc.tag':'6º mayor PIB de Brasil · 4,6% del PIB nacional',
-      't.itp.label':'Por m² · FipeZap, jun/2026', 't.itp.extra':'86.116 hab. · hasta 800 mil visitantes/verano', 't.itp.tag':'Nº1 de Brasil en valorización + precio/m²',
+      't.itp.label':'Por m² · FipeZap, sep/2026', 't.itp.extra':'86.116 hab. · hasta 800 mil visitantes/verano', 't.itp.tag':'3º mayor precio/m² de Brasil',
       't.bc.extra':'+2 millones de turistas / verano', 't.bc.tag':'2º mayor precio/m² de Brasil',
       't.pb.extra':'R$2,5 mil M en lanzamientos · 1S26', 't.pb.tag':'30ª Ciudad que Más Crece en Brasil · Ranking IBGE, Censo 2022',
       't.foot':'Fuentes: IBGE, SEPLAN-SC, FipeZap, DWV Inteligencia de Mercado, Ayuntamientos de Itapema y Porto Belo.',
@@ -1323,8 +1322,8 @@
       'pn.eyebrow':'02 · Panorama Nacional', 'pn.h2':'Dónde está Santa Catarina en el mapa económico de Brasil',
       'pn.lede':'Sexta mayor economía del país y epicentro de la valorización inmobiliaria nacional en los últimos 12 meses.',
       'pn.b1':'Mayor PIB de Brasil', 'pn.b2':'PIB de Santa Catarina · 2024', 'pn.b3':'Las ciudades destacadas en valorización (12m) son catarinenses',
-      'pn.t1':'Ranking de PIB por estado · 2023–2024', 'pn.t2':'Ciudades que más valorizaron · 12 meses (ago/2026)',
-      'pn.foot':'PIB estadual: SEPLAN-SC (Santa Catarina, 2024) y estimaciones IBGE/Banco do Brasil para los demás estados (2023–2024, valores aproximados, metodologías mixtas). Valorización 12 meses: Índice FipeZap, ago/2026, entre las 10 ciudades con el m² residencial más caro del país — no representa la totalidad de las 56 ciudades monitoreadas por el índice.',
+      'pn.t1':'Ranking de PIB por estado · 2023–2024', 'pn.t2':'Ciudades que más valorizaron · 12 meses (sep/2026)',
+      'pn.foot':'PIB estadual: SEPLAN-SC (Santa Catarina, 2024) y estimaciones IBGE/Banco do Brasil para los demás estados (2023–2024, valores aproximados, metodologías mixtas). Valorización 12 meses: Índice FipeZap, sep/2026, entre las 10 ciudades con el m² residencial más caro del país — no representa la totalidad de las 56 ciudades monitoreadas por el índice.',
       'co.eyebrow':'03 · Obras en Construcción', 'co.h2':'Dónde la construcción civil está más activa',
       'co.lede':'Itapema y Porto Belo lideran en volumen de obras simultáneas; Balneário Camboriú apuesta por menos obras, pero de escala monumental.',
       'co.itp.label':'Obras en curso', 'co.itp.extra':'~200 nuevos proyectos en fase de aprobación', 'co.itp.tag':'~197 constructoras activas en la ciudad',
@@ -1340,14 +1339,14 @@
       'cip.nv.t':'valorización de galpones logísticos en 10 años', 'cip.nv.p':'El mayor terminal privado de contenedores de Brasil y una costa de 12 km todavía poco verticalizada para uso residencial.',
       'cip.pn.t':'World + certificación ambiental internacional', 'cip.pn.p':'Cercanía con Balneário Camboriú e Itajaí, turismo consolidado e infraestructura en expansión.',
       'cip.foot':'Valorización nominal 5 años (2020–jul/2025): ranking Inteligência Financeira, vía i9Vale — Itapema +86% (+41% real), Itajaí +81,65% (+37,74% real), Balneário Camboriú +80%+ (+36%+ real), São José +74,54% (+32,35% real), Florianópolis +57,40% (+19,35% real). Ranking nacional: 1º Itapema/SC, 2º Vila Velha/ES, 3º Itajaí/SC, 4º Balneário Camboriú/SC, 5º São José/SC, 6º Vitória/ES, 7º Goiânia/GO, 8º Maceió/AL, 9º Florianópolis/SC, 10º São José dos Campos/SP. Bombinhas: Lenon Imóveis/Zeni Imóveis. Navegantes: Rafael Cassio Imóveis. Penha: PANROTAS.',
-      'rk.eyebrow':'06 · Precio y Valorización', 'rk.h2':'Itapema se mantiene por delante de Balneário Camboriú — Vitória asume el liderazgo nacional',
-      'rk.lede':'El índice FipeZap de agosto/2026 (publicado en set/2026) muestra a Vitória (ES) en el liderazgo nacional; Itapema mantiene el 2º lugar, por delante de Balneário Camboriú desde jun/2026 — las tres forman un grupo aislado por encima de R$15 mil/m².',
+      'rk.eyebrow':'06 · Precio y Valorización', 'rk.h2':'Balneário Camboriú recupera el 2º lugar, con Itapema muy cerca — Vitória sigue en la cima nacional',
+      'rk.lede':'El índice FipeZap de septiembre/2026 (publicado en oct/2026) muestra a Vitória (ES) en el liderazgo nacional; Balneário Camboriú recupera el 2º lugar e Itapema pasa al 3º, separadas por solo R$29/m² — las tres forman un grupo aislado por encima de R$15 mil/m².',
       'rk.b1':'Por encima de São Paulo', 'rk.b2':'Por encima de Río de Janeiro', 'rk.b3':'Por encima de Porto Alegre',
-      'rk.foot':'Fuente: FIPE — Índice FipeZap, Informe de Agosto/2026 (publicado en set/2026). Porto Belo: R$14.712/m² — precio medio de las unidades vendidas en el 1S 2026, DWV Inteligencia de Mercado (dato interno, metodología distinta de FipeZap: transacciones, no anuncios).',
+      'rk.foot':'Fuente: FIPE — Índice FipeZap, Informe de Septiembre/2026 (publicado en oct/2026). Porto Belo: R$14.712/m² — precio medio de las unidades vendidas en el 1S 2026, DWV Inteligencia de Mercado (dato interno, metodología distinta de FipeZap: transacciones, no anuncios).',
       'rk.t2':'Radar mensual · valorización de las ciudades catarinenses monitoreadas por FipeZap',
-      'rk.th1':'Ciudad', 'rk.th2':'R$/m²', 'rk.th3':'Var. mensual (ago/26)', 'rk.th4':'Var. mensual (jul/26)', 'rk.th5':'Var. 12 meses',
+      'rk.th1':'Ciudad', 'rk.th2':'R$/m²', 'rk.th3':'Var. mensual (sep/26)', 'rk.th4':'Var. mensual (ago/26)', 'rk.th5':'Var. 12 meses',
       'rk.c.flo':'Florianópolis', 'rk.c.ita':'Itajaí', 'rk.c.blu':'Blumenau', 'rk.c.bc':'Balneário Camboriú', 'rk.c.itp':'Itapema', 'rk.c.sj':'São José', 'rk.c.pb':'Porto Belo',
-      'rk.t2foot':'Fuente: FIPE — Índice FipeZap, Informe de Agosto/2026 (PDF oficial, fipe.org.br), variación mensual ago/26 vs. jul/26 y acumulado 12 meses. Ordenado por mayor valorización en el mes. <strong>Destacado: Itapema tuvo el peor desempeño mensual del grupo en ago/26 (variación ~0%), mientras Florianópolis, Itajaí y Blumenau aceleraron</strong> — ese movimiento es lo que le costó a Itapema el 1er lugar nacional (ver ranking arriba). Porto Belo no integra la muestra de FipeZap; su valor de referencia es de DWV Inteligencia de Mercado (1S 2026), no comparable mes a mes. Actualizado mensualmente con revisión humana — ver fecha en el pie de la portada.',
+      'rk.t2foot':'Fuente: FIPE — Índice FipeZap, Informe de Septiembre/2026 (PDF oficial, fipe.org.br), variación mensual sep/26 vs. ago/26 y acumulado 12 meses. Ordenado por mayor valorización en el mes. <strong>Destacado: Itapema fue la única del grupo en caer en sep/26 (−0,41%), mientras Itajaí lideró el mes (+0,74%)</strong> — ese movimiento le devolvió a Balneário Camboriú el 2º lugar nacional (ver ranking arriba). Porto Belo no integra la muestra de FipeZap; su valor de referencia es de DWV Inteligencia de Mercado (1S 2026), no comparable mes a mes. Actualizado mensualmente con revisión humana — ver fecha en el pie de la portada.',
       'dv.eyebrow':'07 · Vectores de Valorización', 'dv.h2':'Infraestructura y demanda sostienen el ciclo',
       'dv.d1.tag':'85% ejecutada', 'dv.d1.p':'Duplicación de 73 km que conecta el litoral con el oeste de Santa Catarina — R$1.700 M invertidos.',
       'dv.d2.tag':'R$9 mil M de retorno', 'dv.d2.p':'Puentes y vías marginales que destraban los cuellos de botella entre BC, Itajaí y Navegantes.',
@@ -1361,7 +1360,6 @@
       'dr.b1':'En el mercado inmobiliario desde los 16 años, en Itapema. Consolidó al grupo entre las principales constructoras del Sur del país.',
       'dr.r2':'Socio Fundador y Co-CEO', 'dr.b2':'Gestión administrativa y operacional, enfocada en eficiencia, gobernanza y sostenibilidad.',
       'dr.r3':'Marketing y Comercial', 'dr.b3':'+15 años en construcción civil; especialista en CRM, ventas y posicionamiento de marca.',
-      'dr.r4':'Incorporación', 'dr.b4':'+20 años, +150 emprendimientos entregados en Brasil. Autor de 5 libros, profesor de MBA.',
       'dr.r5':'Jurídico, Personas y Gobernanza', 'dr.b5':'Abogado especialista en Derecho Inmobiliario (FGV Law SP); miembro del IBRADIM. Enfocado en solidez jurídica, gestión de personas y gobernanza corporativa.',
       'dr.r6':'Financiera', 'dr.b6':'+20 años en finanzas y controlling, con paso por una Big Four (PwC). Planificación financiera, automatización de procesos y gestión de equipos.',
       'pa.eyebrow':'11 · Portafolio', 'pa.lede':'Edificaciones verticales de alto estándar — del lanzamiento a la entrega.',
@@ -1398,12 +1396,12 @@
       'ind.lede':'Variación anual de cada indicador, 2021–2026 (parcial) — un gráfico por activo, para ver la tendencia de cada uno sin cruzar líneas.',
       'ind.n2':'Ahorro', 'ind.n2b':'Ahorro', 'ind.n4':'Dólar', 'ind.n4b':'Dólar',
       'ind.r1':'Inflación · caída consistente', 'ind.r2':'Renta fija · estable en alza', 'ind.r3':'Bolsa · alta volatilidad', 'ind.r4':'Cambio · sin tendencia clara',
-      'ind.foot':'2026 parcial (hasta agosto). Barra en negro = año más reciente. Fuentes: Dados de Mercado (IPCA), Brasil Indicadores (Ahorro), B3 (Ibovespa), Banco Central (Dólar).',
+      'ind.foot':'2026 parcial (IPCA hasta septiembre; los demás hasta octubre). Barra en negro = año más reciente. Fuentes: Banco Central (IPCA, Ahorro, Dólar), B3 (Ibovespa).',
       'val.eyebrow':'16 · Curva de Valorización', 'val.h2':'Itapema como referencia: +114% en 5 años',
       'val.lede':'Valorización acumulada, cada activo en su período real — Itapema lidera incluso por delante del CDI, el benchmark más fuerte de la renta fija en los últimos años.',
-      'val.sub1':'jun/19–jun/24, real', 'val.sub2':'2021–2026 (parcial)', 'val.sub3':'proyección 2026–2030', 'val.sub4':'mar/22–jun/26, real',
+      'val.sub1':'jun/19–jun/24, real', 'val.sub2':'2021–2026 (parcial)', 'val.sub3':'proyección 2026–2030', 'val.sub4':'mar/22–sep/26, real',
       'val.leg1':'Ciudades (dato real)', 'val.leg2':'Proyección (no histórico)', 'val.leg3':'Benchmark financiero',
-      'val.foot':'Itapema: R$6.890/m² (jun/2019) → R$12.962/m² (jun/2024), +114% — Índice FipeZap, informe oficial <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE jun/2024 (PDF)</a>, según lo informado por <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9.888/m² (mar/2022) → R$15.228/m² (jun/2026) — <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>. CDI acumulado 2021–2026: 4,42% · 12,39% · 13,04% · 10,88% · 14,32% · 9,37% (parcial hasta 01/set/2026) = +83,9% — Banco Central (SGS), cálculo propio por composición mensual. Ibovespa acumulado 2021–2026: -12,14% · +4,97% · +21,96% · -10,36% · +33,95% · +11,54% (parcial) = +50,7% — cierres de diciembre de cada año y 01/set/2026, B3. Ahorro (Poupança) acumulado 2021–2026: +47,6% (regla vigente, cálculo propio con base en la serie del Banco Central). Dólar (USD/BRL) acumulado 2021–2026: +7,39% · -6,50% · -7,21% · +27,91% · -11,14% · -6,28% (parcial) = -0,8% — PTAX, Banco Central. CDB típico rinde 100–110% del CDI. Porto Belo: proyección de escenario base, no garantía de rentabilidad. Fuentes: B3, Banco Central (SGS), FipeZap.',
+      'val.foot':'Itapema: R$6.890/m² (jun/2019) → R$12.962/m² (jun/2024), +114% — Índice FipeZap, informe oficial <a href="https://downloads.fipe.org.br/indices/fipezap/fipezap-202406-residencial-venda.pdf" target="_blank" rel="noopener">FIPE jun/2024 (PDF)</a>, según lo informado por <a href="https://lanceitapema.com.br/noticia/mostra/itapema-tem-valorizacao-de-114-em-cinco-anos-e-se-destaca-no-mercado-nacional-com-m%C2%B2-a-r-12-962/" target="_blank" rel="noopener">Lance Itapema</a>. Balneário Camboriú: R$9.888/m² (mar/2022, <a href="https://www.realpioneiro.com.br/noticia/balneario-camboriu-ve-valor-do-m-subir-54-em-quatro-anos" target="_blank" rel="noopener">RealPioneiro</a>) → R$15.369/m² (set/2026, FipeZap), +55%. CDI acumulado 2021–2026: 4,42% · 12,39% · 13,04% · 10,88% · 14,32% · 11,63% (parcial hasta oct/2026) = +87,7% — Banco Central (SGS), cálculo propio por composición mensual. Ibovespa acumulado 2021–2026: -12,14% · +4,97% · +21,96% · -10,36% · +33,95% · +5,00% (parcial) = +41,8% — cierres de diciembre de cada año y 29/oct/2026, B3. Ahorro (Poupança) acumulado 2021–2026: +48,7% (regla vigente, cálculo propio con base en la serie del Banco Central). Dólar (USD/BRL) acumulado 2021–2026: +7,39% · -6,50% · -7,21% · +27,91% · -11,14% · -1,48% (parcial) = +4,3% — PTAX, Banco Central. CDB típico rinde 100–110% del CDI. Porto Belo: proyección de escenario base, no garantía de rentabilidad. Fuentes: B3, Banco Central (SGS), FipeZap.',
       'pj.eyebrow':'17 · Proyección de Mercado 2026–2031', 'pj.h2':'Porto Belo es la próxima frontera de valorización',
       'pj.s1lab':'Escenario Base · Porto Belo 2030', 'pj.s1delta':'+34% sobre el valor actual',
       'pj.s2lab':'Escenario Optimista · Porto Belo 2030', 'pj.s2delta':'+64% sobre el valor actual',
@@ -1416,7 +1414,7 @@
       'vi.eyebrow':'09 · Presentación Institucional', 'vi.cap':'Video institucional del grupo, narrado en español.',
       'ct.eyebrow':'19 · Contenido y Redes', 'ct.h2':'Conoce nuestros Emprendimientos', 'ct.cap1':'Contenido 01', 'ct.cap2':'Contenido 02',
       'cta.eyebrow':'20 · Acción Comercial', 'cta.h2':'ABC.inc — Donde Comienza tu Experiencia', 'cta.credit':'Terraza gourmet con vista al mar · emprendimiento ABC.inc',
-      'cta.a1s':'Exclusividad comprobada por datos.', 'cta.a1p':'Itapema sigue entre las 3 plazas más caras de Brasil — por delante de Balneário Camboriú.',
+      'cta.a1s':'Exclusividad comprobada por datos.', 'cta.a1p':'Itapema sigue entre las 3 plazas más caras de Brasil — a menos de R$30/m² de Balneário Camboriú.',
       'cta.a2s':'Pipeline garantizado.', 'cta.a2p':'12,4 millones de m² en banco de tierras, 2.200 unidades ya entregadas.',
       'cta.a3s':'Porto Belo como entrada.', 'cta.a3p':'Proyección de valorización de hasta 64% para 2030.',
       'cta.a4s':'ADN de producto de autor.',
